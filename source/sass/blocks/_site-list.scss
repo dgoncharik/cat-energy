@@ -7,27 +7,24 @@ $border: 1px solid $light-gray;
   @include list-reset;
 
   &__item {
-    padding-top: 22px;
-    padding-bottom: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
     font-weight: 500;
-    border-top: $border;
+    border-bottom: $border;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-
-    &:last-child {
-      border-bottom: $border;
-    }
   }
 
   &__link {
     width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+    box-sizing: border-boxl
   }
 }
