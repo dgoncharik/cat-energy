@@ -1,0 +1,36 @@
+@import '../variables', '../mixins';
+
+.how-it-works {
+  &__title {
+    margin: 0;
+
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    min-height: 60px;
+    padding-left: 80px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    padding-top: 4px;
+    padding-right: 40px;
+    font-family: $additional-font-family;
+    font-size: 14px;
+    line-height: 18px;
+    color: $gray;
+
+  }
+}

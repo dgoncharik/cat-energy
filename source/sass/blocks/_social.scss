@@ -1,0 +1,36 @@
+@import '../variables', '../mixins';
+
+$border: 1px solid #d9d9d9;
+$img-color: #666666;
+$img-color-hvr: #68b738;
+$img-color-active: rgba($img-color-hvr, .3);
+
+.social {
+  @include list-reset;
+  min-height: 64px;
+  border-top: $border;
+  border-bottom: $border;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__item {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &__img {
+    fill: $img-color;
+    transition: fill .15s;
+
+    &:hover {
+      fill: $img-color-hvr;
+    }
+
+    &:active {
+      fill: $img-color-active;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../variables', '../mixins';
+
+.copyright {
+
+  &__link {
+    width: 100%;
+    min-height: 75px;
+    font-family: $additional-font-family;
+    font-size: 16px;
+    line-height: 16px;
+    color: $gray;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: relative;
+  }
+
+  &__logo {
+    width: 27px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+}

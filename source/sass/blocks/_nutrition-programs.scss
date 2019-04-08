@@ -1,0 +1,9 @@
+@import '../variables', '../mixins';
+
+.nutrition-programs {
+
+  &__list {
+    @include list-reset;
+    
+  }
+}

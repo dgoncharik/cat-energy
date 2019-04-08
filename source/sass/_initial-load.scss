@@ -1,0 +1,53 @@
+@import 'normalize', 'variables', 'mixins';
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: $main-font-family;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+
+  background-position: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+// Переместить правило
+.intro__btn {
+  width: 100%;
+}
+
+// Переместить правило
+.map__img {
+  display: block;
+  margin: 0 auto;
+}

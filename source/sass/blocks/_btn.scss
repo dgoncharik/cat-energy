@@ -1,0 +1,35 @@
+@import '../variables';
+
+$bg-color: #68b738;
+$bg-color-hvr: #5eaa2f;
+$text-color: #ffffff;
+
+.btn {
+  max-width: 100%;
+  padding: 13px 20px;
+  font-family: $main-font-family;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  text-align: center;
+  color: $text-color;
+  background-color: $bg-color;
+  box-sizing: border-box;
+
+  display: inline-block;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-color-hvr;
+  }
+
+  &:active {
+    background-color: $bg-color-hvr;
+    color: rgba($text-color, .3);
+  }
+}

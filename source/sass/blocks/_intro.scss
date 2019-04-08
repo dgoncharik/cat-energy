@@ -1,0 +1,37 @@
+@import '../variables', '../mixins';
+
+.intro {
+  padding-top: 29px;
+  background-image: linear-gradient(to bottom, #63a73a 305px, transparent 305px);
+  color: white;
+  font-weight: 400;
+  box-sizing: border-box;
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 27px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: inherit;
+    text-align: center;
+  }
+
+  &__slogan {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: inherit;
+    text-align: center;
+    display: block;
+  }
+
+  &__img {
+    min-height: 271px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

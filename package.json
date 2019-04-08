@@ -1,0 +1,33 @@
+{
+  "name": "cat-energy",
+  "version": "1.0.0",
+  "description": "My First Gulp Project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng-unlimited": "^1.0.3",
+    "gulp.spritesmith": "^6.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgoncharik/cat-energy.git"
+  },
+  "author": "Denis Goncharik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgoncharik/cat-energy/issues"
+  },
+  "homepage": "https://github.com/dgoncharik/cat-energy#readme"
+}

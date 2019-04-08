@@ -1,0 +1,36 @@
+@import '../variables', '../mixins';
+
+.example {
+  min-height: 705px;
+  background-color: #f2f2f2;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+    padding-right: 45px;
+    font-family: $additional-font-family;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &__price {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

@@ -1,0 +1,27 @@
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin triangle($direction, $size, $color) {
+  border: $size solid $color;
+
+  @if ($direction == right) {
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  } @else if ($direction == left) {
+      border-left: none;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    } @else if ($direction == top) {
+        border-top-style: none;
+        border-left-color: transparent;
+        border-right-color: transparent;
+      } @else if ($direction == bottom) {
+          border-bottom-style: none;
+          border-left-color: transparent;
+          border-right-color: transparent;
+      }
+}

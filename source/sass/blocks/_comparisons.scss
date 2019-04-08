@@ -1,0 +1,44 @@
+@import '../variables', '../mixins';
+
+.comparisons {
+
+  &__pictures {
+    min-height: 320px;
+    text-align: center;
+  }
+
+  &__range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__progress {
+    width: 82px;
+    padding: 3px 5px;
+    margin: 0 18px;
+    border: 1px solid rgb(205, 205, 205);
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  &__toggle {
+    width: 35px;
+    height: 6px;
+    background-color: rgb(104, 183, 56);
+    border-radius: 6px;
+    // transform: translateX(100%);
+  }
+
+  &__btn {
+    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+  }
+}

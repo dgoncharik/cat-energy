@@ -1,0 +1,42 @@
+@import '../variables', '../mixins';
+
+.block-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    min-width: 124px;
+    padding: 16px 5px;
+    border-radius: 3px;
+    border: 1px solid #cfcfcf;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    // box-sizing: border-box;
+  }
+
+  &__text {
+    width: 87px;
+    padding: 0 5px;
+    font-family: $additional-font-family;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__value {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: auto;
+  }
+}
