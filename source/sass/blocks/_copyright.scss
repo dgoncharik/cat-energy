@@ -1,7 +1,6 @@
 @import '../variables', '../mixins';
 
 .copyright {
-
   &__link {
     width: 100%;
     min-height: 75px;
@@ -14,7 +13,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // position: relative;
+    transition: color .15s;
+
+    &:hover {
+      .copyright__logo {
+        fill: green;
+      }
+    }
+
+    &:active {
+      color: rgba($gray, .3);
+      .copyright__logo {
+        fill: rgba(green, .3);
+      }
+    }
   }
 
   &__logo {
@@ -22,5 +34,7 @@
     height: 34px;
     flex-shrink: 0;
     margin-left: 20px;
+    fill: $gray;
+    transition: fill .15s;
   }
 }
