@@ -1,0 +1,61 @@
+@import '../variables', '../mixins';
+
+.checkbox {
+  position: relative;
+
+  &__input:checked ~ &__label::after {
+    display: block;
+  }
+
+  &__label {
+    padding-left: 45px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+
+    &:active {
+      opacity: .3;
+    }
+
+    &:hover::before,
+    &:focus::before{
+      border-color: #bcbcbc;
+    }
+
+    &::before,
+    &::after {
+      transition: all .3s;
+    }
+
+    &::before {
+      content: "";
+      width: 29px;
+      height: 29px;
+      border: 1px solid #cfcfcf;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 8px;
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      border: 2px solid #6bb83c;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      transform: rotate(-45deg);
+      display: none;
+    }
+  }
+}

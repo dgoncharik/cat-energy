@@ -51,7 +51,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['./source/sass/**/*.scss'], gulp.series('sass'));
-  gulp.watch(['./source/**/*.html'], gulp.series('html'))
+  gulp.watch(['./source/**/*.html'], gulp.series('html'));
 });
 
 gulp.task('default', gulp.series('sass', gulp.parallel('watch', 'browser-sync')))

@@ -1,0 +1,68 @@
+@import 'variables', 'mixins';
+
+.product-show-more {
+  padding-top: 80px;
+  padding-bottom: 25px;
+  position: relative;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: $additional-font-family;
+    font-size: 12px;
+    line-height: 16px;
+    color: $gray;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: #f2f2f2;
+    color: $gray;
+
+    &:hover,
+    &:focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+      color: rgba($gray, .3);
+    }
+  }
+
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg version='1.1' width='30' height='30' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' xml:space='preserve'%3E%3Cpolygon class='st0' points='30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 '/%3E%3C/svg%3E");
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 50%;
+      top: 26px;
+      transform: translateX(-50%);
+      opacity: .2;
+    }
+
+    &::after {
+    content: "";
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: #ededed;
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+  }
+}

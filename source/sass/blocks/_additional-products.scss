@@ -1,0 +1,81 @@
+@import 'variables', 'mixins';
+
+$border: 1px solid #cdcdcd;
+$color-name: #222222;
+
+.additional-products {
+  // overflow: hidden;
+
+  &__title {
+    padding-top: 29px;
+    padding-bottom: 33px;
+  }
+
+  &__table {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    border-top: $border;
+  }
+
+  &__tbody {
+    display: block;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    padding-bottom: 17px;
+    border-bottom: $border;
+    display: block;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-name;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &__quantity,
+  &__price {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    font-family: $additional-font-family;
+    font-size: 14px;
+    line-height: 14px;
+    color: $gray;
+    font-weight: 400;
+    display: inline-block;
+
+  }
+
+  &__quantity {
+    float: left;
+  }
+
+  &__price {
+    float: right;
+  }
+
+  &__btn-wrapper {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__present {
+    margin-top: 49px;
+  }
+}

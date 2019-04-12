@@ -1,0 +1,8 @@
+@import '../variables', '../mixins';
+
+.map {
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
+}

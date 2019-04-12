@@ -1,7 +1,7 @@
 {
   "name": "cat-energy",
   "version": "1.0.0",
-  "description": "My First Gulp Project",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^4.0.0",
@@ -14,8 +14,10 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-notify": "^3.2.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^8.0.0",
     "gulp-tinypng-unlimited": "^1.0.3",
-    "gulp.spritesmith": "^6.9.0"
+    "gulp.spritesmith": "^6.9.0",
+    "stylelint": "^9.10.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -19,13 +19,15 @@ input[type="radio"].visually-hidden {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
   font-family: $main-font-family;
   font-size: 20px;
   line-height: 20px;
+
   font-weight: 400;
   color: $black;
-
-  background-position: center;
 }
 
 img {
@@ -34,20 +36,8 @@ img {
 }
 
 .container {
-  width: 100%;
+  width: auto;
   padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
-}
-
-
-// Переместить правило
-.intro__btn {
-  width: 100%;
-}
-
-// Переместить правило
-.map__img {
-  display: block;
-  margin: 0 auto;
 }

@@ -1,0 +1,11 @@
+@import '../variables', '../mixins';
+
+.note {
+  margin: 0;
+  padding: 0;
+  font-family: $additional-font-family;
+  font-size: 14px;
+  line-height: 16px;
+  color: $gray;
+  text-align: center;
+}

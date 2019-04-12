@@ -1,0 +1,13 @@
+@import 'variables', 'mixins';
+
+.main-title {
+  margin: 0;
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 26px;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: $black;
+  position: relative;
+}

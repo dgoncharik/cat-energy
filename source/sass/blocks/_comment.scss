@@ -1,0 +1,71 @@
+@import '../variables', '../mixins';
+
+$box-shadow-color: #e6e6e6;
+$box-shadow-color-hvr: #cdcdcd;
+$box-shadow-color-act: #444444;
+$box-shadow-color-error: #ff8282;
+$box-shadow-width: 1px;
+$main-color: #222222;
+$placeholder-color: #444444;
+
+.comment {
+  &__title {
+
+  }
+
+  &__textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    padding: 13px 16px;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $main-color;
+    box-sizing: border-box;
+    transition: box-shadow .15s;
+    border: none;
+    box-shadow: $box-shadow;
+    outline: none;
+
+    &--error {box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-error}
+
+    &:hover {box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color-hvr}
+
+    &:active, &:focus {box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-act}
+
+    &::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: $placeholder-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    &::-moz-placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: $placeholder-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    } /* Firefox 19+ */
+
+    &:-moz-placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: $placeholder-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    } /* Firefox 18- */
+
+    &:-ms-input-placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: $placeholder-color;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
