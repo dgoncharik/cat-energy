@@ -57,11 +57,18 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
       background-position: calc(100% - 13px) center;
     }
 
-    &--error {box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-error}
+    &--error {
+      box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-error
+    }
 
-    &:hover {box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color-hvr}
+    &:hover {
+      box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color-hvr;
+    }
 
-    &:active, &:focus {box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-act}
+    &:active,
+    &:focus {
+      box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $box-shadow-color-act
+    }
 
     &::-webkit-input-placeholder {color: $placeholder-color;}
     &::-moz-placeholder          {color: $placeholder-color;} /* Firefox 19+ */
@@ -74,7 +81,3 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
     }
   }
 }
-
-
-
-

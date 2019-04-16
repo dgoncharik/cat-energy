@@ -30,30 +30,30 @@
       </nav>
   </header>
 
-  <main class="page-main container overflow--hidden">
+  <main class="page-main container">
     <h1 class="main-title page-form__main-title">Подбор программы</h1>
     <section class="questionnaire page-form__questionnaire">
       <h2 class="visually-hidden">Анкета</h2>
       <p class="questionnaire__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form action="https://echo.htmlacademy.ru" method="POST" class="questionnaire__form">
         <div class="questionnaire__row">
-          <fieldset class="questionnaire__item questionnaire__item--basic-data">
-            <p class="entry-field questionnaire__entry-field questionnaire__entry-field--basic-data">
+          <fieldset class="basic-data questionnaire__item">
+            <p class="entry-field basic-data__entry-field">
               <label class="entry-field__label" for="cat-name">Имя:*</label>
               <input class="entry-field__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
             </p>
-            <p class="entry-field questionnaire__entry-field questionnaire__entry-field--basic-data">
+            <p class="entry-field basic-data__entry-field">
               <label class="entry-field__label" for="cat-weight">Вес (кг):*</label>
               <input class="entry-field__input entry-field__input--no-apperance" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
             </p>
-            <p class="entry-field questionnaire__entry-field questionnaire__entry-field--basic-data">
+            <p class="entry-field basic-data__entry-field">
               <label class="entry-field__label" for="cat-age">Возраст (лет):</label>
               <input class="entry-field__input entry-field__input--no-apperance" type="number" id="cat-age" name="cat-age" placeholder="7">
             </p>
           </fieldset>
 
-          <fieldset class="questionnaire__item questionnaire__item--program-selection ">
-            <ul class="program-selection questionnaire__program-selection">
+          <fieldset class="program-selection questionnaire__item">
+            <ul class="program-selection__list">
               <li class="program-selection__item">
                 <input class="program-selection__input visually-hidden" type="radio" name="program" id="losing-weight" value="losing-weight" checked>
                 <label class="program-selection__label" for="losing-weight">Похудение</label>
@@ -70,44 +70,45 @@
           </fieldset>
         </div>
 
-        <fieldset class="questionnaire__item questionnaire__item--owner-contacts ">
-          <legend class="title questionnaire__subtitle questionnaire__subtitle--owner-contacts">Контактные данные (владельца кота)</legend>
-          <p class="entry-field questionnaire__entry-field questionnaire__entry-field--owner-contacts">
+        <fieldset class="owner-contacts questionnaire__item">
+          <legend class="title-line owner-contacts__title"><span class="title-line__text title-line__text--width">Контактные данные (владельца кота)</span></legend>
+          <p class="entry-field owner-contacts__entry-field">
             <label class="entry-field__label" for="email">e-mail:*</label>
             <input class="entry-field__input entry-field__input--email" type="email"  id="email" name="email" placeholder="kuklachev@gmail.com" required>
           </p>
-          <p class="entry-field questionnaire__entry-field questionnaire__entry-field--owner-contacts">
+          <p class="entry-field owner-contacts__entry-field">
             <label class="entry-field__label" for="phone">Телефон:*</label>
             <input class="entry-field__input entry-field__input--phone" type="phone"  id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
           </p>
         </fieldset>
 
-        <fieldset class="comment questionnaire__item questionnaire__item--comment">
-          <legend class="title comment__title">Комментарий</legend>
+        <fieldset class="comment questionnaire__item">
+          <legend class="title-line comment__title"><span class="title-line__text">Комментарий</span></legend>
           <textarea class="comment__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="questionnaire__item questionnaire__item--additionally">
-            <legend class="title questionnaire__subtitle questionnaire__subtitle--additionally">Дополнительно</legend>
-          <ul class="questionnaire__additionally-list">
-            <li class="checkbox questionnaire__checkbox">
+        <fieldset class="additionally questionnaire__item">
+          <legend class="title-line additionally__title"><span class="title-line__text">Дополнительно</span></legend>
+          <ul class="additionally__list">
+            <li class="checkbox additionally__checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="sugar-substitute" id="sugar-substitute" checked>
               <label class="checkbox__label" for="sugar-substitute">Сахарозаменитель</label>
             </li>
-            <li class="checkbox questionnaire__checkbox">
+            <li class="checkbox additionally__checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="drinking-water" id="drinking-water">
               <label class="checkbox__label" for="drinking-water">Питьевая вода</label>
             </li>
-            <li class="checkbox questionnaire__checkbox">
+            <li class="checkbox additionally__checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="milk" id="milk">
               <label class="checkbox__label" for="milk">Питьевая вода</label>
             </li>
-            <li class="checkbox questionnaire__checkbox">
+            <li class="checkbox additionally__checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
               <label class="checkbox__label" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
+
         <button class="btn questionnaire__btn" type="submit">Отправить заявку</button>
         <p class="note questionnaire__note">* &#8212; Обязательные поля</p>
       </form>

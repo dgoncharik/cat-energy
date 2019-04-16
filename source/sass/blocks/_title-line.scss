@@ -1,25 +1,35 @@
 @import 'variables', 'mixins';
 
-.title {
+.title-line {
+  width: 100%;
   margin: 0;
   padding: 0;
   padding-top: 34px;
   padding-bottom: 34px;
-  padding-right: 20px;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  background-color: white;
   position: relative;
-  display: inline-block;
   box-sizing: border-box;
-  align-items: center;
+  display: block;
 
+  &__text {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    display: inline-block;
+    // opacity: .2;
 
+    &--width {
+      width: 201px;
+    }
+  }
 
   &::after {
     content: "";
-    width: calc(100vw);
+    width: calc(100% + 40px);
+    margin-left: -20px;
     min-width: 20px;
     height: 3px;
     background-color: #68b738;

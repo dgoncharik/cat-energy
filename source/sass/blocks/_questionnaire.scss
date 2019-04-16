@@ -13,51 +13,11 @@
   }
 
   &__item {
-    margin: 0;
-    padding: 0;
-    border: none;
-
-    &--basic-data {
-      padding-bottom: 23px;
-    }
-
-    &--program-selection {
-
-    }
-
-    &--owner-contacts {
-
-    }
-    &--additionally {
-      margin-bottom: 34px;
-    }
+    
   }
 
-  &__subtitle {
-    &--owner-contacts {
-      width: 201px;
-      box-sizing: border-box;
-    }
-  }
-
-  &__entry-field {
-    margin-bottom: 14px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  &__program-selection {
-
-  }
-
-  &__additionally-list {
-    @include list-reset;
-  }
-
-  &__checkbox {
-    margin-bottom: 13px;
+  &__basic-data {
+    // padding-bottom: 23px;
   }
 
   &__btn {

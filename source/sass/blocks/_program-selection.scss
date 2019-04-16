@@ -1,10 +1,16 @@
 @import '../variables', '../mixins';
 
 .program-selection {
-  @include list-reset;
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &__list {
+    @include list-reset;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   &__item {
     margin-bottom: 10px;
@@ -15,7 +21,6 @@
   &__input:checked ~ .program-selection__label::after {
       display: block;
     }
-
 
   &__label {
     padding-top: 8px;

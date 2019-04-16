@@ -9,9 +9,9 @@ $main-color: #222222;
 $placeholder-color: #444444;
 
 .comment {
-  &__title {
-
-  }
+  margin: 0;
+  padding: 0;
+  border: none;
 
   &__textarea {
     width: 100%;
