@@ -6,7 +6,8 @@
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "static-eval": "^2.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
