@@ -8,7 +8,7 @@ $color-name: #222222;
 
   &__title {
     padding-top: 29px;
-    padding-bottom: 33px;
+    padding-bottom: 32px;
   }
 
   &__table {
@@ -26,7 +26,7 @@ $color-name: #222222;
   &__item {
     margin: 0;
     padding: 0;
-    padding-top: 13px;
+    padding-top: 14px;
     padding-bottom: 17px;
     border-bottom: $border;
     display: block;
@@ -76,6 +76,7 @@ $color-name: #222222;
   }
 
   &__present {
-    margin-top: 49px;
+    margin-top: 39px;
+    margin-bottom: 35px;
   }
 }

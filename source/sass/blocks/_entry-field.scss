@@ -24,10 +24,15 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
 
   &__label {
     margin-right: 15px;
+    flex-shrink: 0;
   }
 
   &__input {
-    padding: 13px 15px;
+    min-width: 100px;
+    min-height: 45px;
+    box-sizing: border-box;
+
+    padding: 13px 16px;
     margin: 0;
     font-size: inherit;
     line-height: inherit;
@@ -43,7 +48,7 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
 
     &--email,
     &--phone {
-      padding-right: 50px;
+      padding-right: 45px;
       background-repeat: no-repeat;
       background-position: calc(100% - 16px) center;
     }

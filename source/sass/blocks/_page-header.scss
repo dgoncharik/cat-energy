@@ -1,5 +1,24 @@
 @import '../variables', '../mixins';
 
 .page-header {
+  &__logo {
+    min-height: 65px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
 
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-top: 24px;
+    display: flex;
+    align-items: flex-start;
+
+    &__logo {
+      margin-right: 76px;
+    }
+
+    &__main-nav {
+      flex-grow: 1;
+    }
+  }
 }

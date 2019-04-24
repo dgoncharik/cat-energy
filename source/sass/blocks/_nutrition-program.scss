@@ -9,17 +9,17 @@ $line-description-color: #d9d9d9;
 
 .nutrition-program {
   background-color: $bg-color;
-  padding-top: 35px;
+  padding-top: 31px;
   padding-left: 20px;
   padding-right: 20px;
 
   &__title {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     padding: 0px;
     padding-left: 70px;
-    padding-right: 20px;
-    font-size: 27px;
+    padding-right: 15px;
+    font-size: 24px;
     line-height: 37px;
     font-weight: 400;
     text-transform: uppercase;
@@ -28,8 +28,8 @@ $line-description-color: #d9d9d9;
   &__description {
     margin: 0;
     padding: 0;
-    padding-bottom: 24px;
-    padding-right: 40px;
+    padding-bottom: 22px;
+    padding-right: 15px;
     font-family: $additional-font-family;
     color: $gray;
     font-size: 14px;
@@ -41,8 +41,8 @@ $line-description-color: #d9d9d9;
 
   &__link {
     max-width: 100%;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 21px;
+    padding-bottom: 21px;
     padding-right: 45px;
     font-size: 16px;
     line-height: 16px;

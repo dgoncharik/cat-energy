@@ -4,7 +4,13 @@
   margin: 0;
   padding: 0;
   border: none;
-  
+
+  &__title {
+    &::after {
+      top: 44px;
+    }
+  }
+
   &__entry-field {
     margin-bottom: 14px;
 

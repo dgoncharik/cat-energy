@@ -22,7 +22,7 @@
 
   &__title {
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     padding: 0;
     font-size: 36px;
     line-height: 36px;
@@ -32,19 +32,28 @@
 
   &__slogan {
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     font-size: 14px;
     line-height: 14px;
     font-weight: inherit;
     text-align: center;
+    text-transform: uppercase;
     display: block;
   }
 
   &__img {
-    min-height: 271px;
+    width: 280px;
+    height: 271px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2px;
   }
 
   &__btn {
     width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }

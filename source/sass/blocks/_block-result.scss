@@ -8,13 +8,13 @@
 
   &__item {
     min-width: 124px;
-    padding: 16px 5px;
+    padding: 15px 5px;
     border-radius: 3px;
     border: 1px solid #cfcfcf;
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-    // box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   &__text {
@@ -23,6 +23,7 @@
     font-family: $additional-font-family;
     font-size: 12px;
     line-height: 12px;
+    color: #444444;
     font-weight: 400;
     text-align: center;
     background-color: #f2f2f2;
@@ -37,6 +38,7 @@
     font-size: 24px;
     line-height: 24px;
     font-weight: 400;
+    text-transform: uppercase;
     margin: auto;
   }
 }

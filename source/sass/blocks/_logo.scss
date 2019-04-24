@@ -1,0 +1,32 @@
+@import '../variables', '../mixins';
+
+.logo {
+  // padding-top: 24px;
+  // padding-bottom: 24px;
+  text-align: center;
+  margin-right: -20px;
+  margin-left: -20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+
+  &__img {
+    width: 33px;
+    height: 38px;
+  }
+
+  &__text {
+
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    margin: 0;
+    padding: 0;
+    min-width: 192px;
+    min-height: auto;
+    text-align: left;
+    border: none;
+  }
+}

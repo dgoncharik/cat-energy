@@ -1,0 +1,10 @@
+@import '../variables', '../mixins';
+
+.page-footer {
+  background-color: #f2f2f2;
+
+  &__logo {
+    padding-top: 39px;
+    padding-bottom: 29px;
+  }
+}

@@ -17,8 +17,13 @@ $img-color-active: rgba($img-color-hvr, .3);
   box-sizing: border-box;
 
   &__item {
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    margin-right: 14px;
+    margin-left: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__img {

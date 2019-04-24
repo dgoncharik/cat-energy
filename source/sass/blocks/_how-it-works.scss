@@ -1,11 +1,13 @@
 @import '../variables', '../mixins';
 
 .how-it-works {
+  padding-bottom: 25px;
+
   &__title {
     margin: 0;
 
     padding: 0;
-    padding-top: 22px;
+    padding-top: 17px;
     padding-bottom: 23px;
     font-size: 36px;
     line-height: 60px;
@@ -26,7 +28,6 @@
     margin: 0;
     padding: 0;
     padding-top: 4px;
-    padding-right: 40px;
     font-family: $additional-font-family;
     font-size: 14px;
     line-height: 18px;

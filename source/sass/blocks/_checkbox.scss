@@ -10,7 +10,7 @@
   &__label {
     padding-left: 45px;
     padding-top: 6px;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 400;
@@ -36,8 +36,8 @@
 
     &::before {
       content: "";
-      width: 29px;
-      height: 29px;
+      width: 28px;
+      height: 28px;
       border: 1px solid #cfcfcf;
       position: absolute;
       left: 0;
@@ -46,15 +46,15 @@
 
     &::after {
       content: "";
-      width: 16px;
+      width: 17px;
       height: 8px;
       position: absolute;
-      left: 6px;
-      top: 6px;
+      left: 5px;
+      top: 5px;
       border: 2px solid #6bb83c;
       border-top-color: transparent;
       border-right-color: transparent;
-      transform: rotate(-45deg);
+      transform: rotate(-48deg);
       display: none;
     }
   }

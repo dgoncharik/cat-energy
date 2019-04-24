@@ -3,8 +3,10 @@
 .comparisons {
 
   &__pictures {
-    min-height: 320px;
-    text-align: center;
+    width: 320px;
+    height: 240px;
+    margin: 0 auto;
+    transform: translateX(-20px);
   }
 
   &__range {

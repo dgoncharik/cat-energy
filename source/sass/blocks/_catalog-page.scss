@@ -1,0 +1,8 @@
+@import '../variables', '../mixins';
+
+.catalog-page {
+  &__main-title {
+    padding-top: 17px;
+    padding-bottom: 26px;
+  }
+}
