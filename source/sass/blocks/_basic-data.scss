@@ -3,13 +3,20 @@
   margin: 0;
   padding: 0;
   border: none;
-  padding-bottom: 23px;
 
   &__entry-field {
     margin-bottom: 14px;
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .basic-data {
+    &__entry-field {
+      margin-bottom: 19px;
     }
   }
 }

@@ -6,3 +6,32 @@
     padding-bottom: 24px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .form-page {
+    &__main-title {
+      padding: 0;
+      margin-top: 64px;
+    }
+
+    &__questionnaire {
+      margin-bottom: 72px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-page {
+    &__main-title {
+      margin-top: 80px;
+    }
+
+    .page-main {
+      overflow: hidden;
+    }
+
+    &__questionnaire {
+      margin-bottom: 82px;
+    }
+  }
+}

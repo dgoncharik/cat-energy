@@ -4,6 +4,10 @@
   &__list {
     @include list-reset;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -20px;
 
     &::before {
       content: "";
@@ -12,6 +16,66 @@
       background-color: #ededed;
       position: absolute;
       left: -20px;
+    }
+  }
+
+  &__product,
+  &__product-show-more {
+    width: 280px;
+    max-width: 360px;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    &__list {
+      margin: 0;
+      margin-left: -30px;
+      margin-right: -30px;
+      align-items: flex-end;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__product,
+    &__product-show-more {
+      width: 324px;
+      max-width: 400px;
+      flex-grow: 1;
+      margin: 0;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 57px;
+    }
+
+    &__product {
+      min-height: 514px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+
+    &__list {
+      margin: 0;
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+
+    &__product,
+    &__product-show-more {
+      width: 245px;
+      max-width: none;
+      flex-grow: 0;
+      margin: 0;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 60px;
     }
   }
 }

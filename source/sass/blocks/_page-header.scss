@@ -3,6 +3,8 @@
 .page-header {
   &__logo {
     min-height: 65px;
+    margin-right: -20px;
+    margin-left: -20px;
     border-bottom: 1px solid #e6e6e6;
   }
 }
@@ -11,14 +13,31 @@
   .page-header {
     padding-top: 24px;
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
 
     &__logo {
-      margin-right: 76px;
+      // margin-right: 41px;
+      // margin-right: 5.6%;
+      // margin-right: auto;
+      margin: 0;
+      min-width: 192px;
+      min-height: auto;
+      border: none;
     }
 
     &__main-nav {
-      flex-grow: 1;
+      // width: 440px;
+      // flex-grow: 1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 56px;
+
+    &__logo {
+      // margin-right: 510px;
     }
   }
 }

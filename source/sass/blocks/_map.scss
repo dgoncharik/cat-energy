@@ -2,7 +2,42 @@
 
 .map {
   &__img {
+    width: 320px;
+    height: 362px;
     display: block;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    &__img {
+      width: 768px;
+      height: 396px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+
+    &__wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__address-plate {
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      z-index: 10;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 1440px;
+      height: auto;
+    }
   }
 }

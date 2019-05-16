@@ -4,11 +4,10 @@
   // padding-top: 24px;
   // padding-bottom: 24px;
   text-align: center;
-  margin-right: -20px;
-  margin-left: -20px;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
+  transition: opacity 150ms;
 
   &__img {
     width: 33px;
@@ -18,14 +17,21 @@
   &__text {
 
   }
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .6;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .logo {
     margin: 0;
     padding: 0;
-    min-width: 192px;
-    min-height: auto;
     text-align: left;
     border: none;
   }

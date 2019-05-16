@@ -34,3 +34,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+// fix ie11
+main {
+  display: block;
+}

@@ -8,3 +8,9 @@
   font-weight: 400;
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .main-title {
+    font-size: 60px;
+  }
+}

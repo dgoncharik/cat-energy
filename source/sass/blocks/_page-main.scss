@@ -10,3 +10,20 @@
 
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page-main {
+    &__intro {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    &__intro {
+
+    }
+  }
+}

@@ -19,6 +19,7 @@
     position: relative;
     display: block;
     box-sizing: border-box;
+    word-wrap: break-word;
 
     &:active {
       opacity: .3;
@@ -56,6 +57,35 @@
       border-right-color: transparent;
       transform: rotate(-48deg);
       display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width)  {
+  .checkbox {
+    &__label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 58px;
+      font-size: 20px;
+      line-height: 20px;
+
+    &::before {
+      width: 38px;
+      height: 38px;
+    }
+
+    &::after {
+      top: 10px;
+      left: 10px;
+    }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .checkbox {
+    &__label {
     }
   }
 }

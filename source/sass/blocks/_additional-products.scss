@@ -1,14 +1,17 @@
 @import 'variables', 'mixins';
 
-$border: 1px solid #cdcdcd;
+$border-color: #cdcdcd;
 $color-name: #222222;
 
 .additional-products {
   // overflow: hidden;
 
   &__title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
     padding-top: 29px;
-    padding-bottom: 32px;
+    padding-bottom: 33px;
   }
 
   &__table {
@@ -16,7 +19,7 @@ $color-name: #222222;
     padding: 0;
     display: block;
     position: relative;
-    border-top: $border;
+    border-top: 1px solid $border-color;
   }
 
   &__tbody {
@@ -28,7 +31,7 @@ $color-name: #222222;
     padding: 0;
     padding-top: 14px;
     padding-bottom: 17px;
-    border-bottom: $border;
+    border-bottom: 1px solid $border-color;
     display: block;
   }
 
@@ -77,6 +80,133 @@ $color-name: #222222;
 
   &__present {
     margin-top: 39px;
-    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products {
+    $border-color: #e6e6e6;
+
+    &__title {
+      padding: 0;
+      margin-top: 12px;
+      margin-bottom: 78px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__table {
+      border-top: 1px solid $border-color;
+    }
+
+    &__item {
+      padding-top: 27px;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-bottom: 27px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      border: 1px solid $border-color;
+      border-top: none;
+    }
+
+    &__name {
+      min-width: 285px;
+      margin: 0;
+      margin-right: auto;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__quantity,
+    &__price {
+      margin: 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__price {
+      min-width: 60px;
+      margin-left: 34px;
+      text-align: end;
+    }
+
+    &__btn-wrapper {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    &__btn {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__present {
+      margin: 0;
+      margin-top: 69px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products {
+    $border-color: #cdcdcd;
+
+    &__title {
+      margin-top: 17px;
+    }
+
+    &__flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__table {
+      width: 895px;
+      border-color: $border-color;
+    }
+
+    &__item {
+      padding: 0;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      border-color: $border-color;
+      border-left: none;
+      border-right: none;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    &__name {
+      margin: 0;
+      margin-right: 41px;
+    }
+
+    &__quantity {
+      margin-top: 8px;
+      margin-right: 20px;
+    }
+
+    &__price {
+      margin-left: auto;
+      margin-top: 8px;
+      text-align: left;
+    }
+
+    &__btn-wrapper {
+      width: 245px;
+      min-width: 245px;
+      margin: 0;
+      margin-left: 20px;
+    }
+
+    &__btn {
+
+    }
+
+    &__present {
+      margin: 0;
+    }
   }
 }

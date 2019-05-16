@@ -2,7 +2,40 @@
 
 .catalog-page {
   &__main-title {
-    padding-top: 17px;
-    padding-bottom: 26px;
+    margin-top: 17px;
+    margin-bottom: 26px;
+  }
+
+  &__additional-products {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-page {
+    &__main-title {
+      margin-top: 64px;
+      margin-bottom: 79px;
+    }
+
+    &__additional-products {
+      margin-bottom: 76px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-page {
+    &__main-title {
+      margin-top: 80px;
+    }
+
+    &__page-main {
+      overflow: hidden;
+    }
+
+    &__additional-products {
+      margin-bottom: 86px;
+    }
   }
 }

@@ -2,8 +2,6 @@
 
 .copyright {
   &__link {
-    width: 100%;
-    min-height: 79px;
     font-family: $additional-font-family;
     font-size: 16px;
     line-height: 16px;
@@ -34,7 +32,7 @@
     height: 34px;
     flex-shrink: 0;
     margin-left: 20px;
-    fill: $gray;
+    fill: #666666;
     transition: fill .15s;
   }
 }

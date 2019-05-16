@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     top: 0;
+    left: 0px;
     position: absolute;
     z-index: -100;
   }
@@ -55,5 +56,81 @@
     padding-bottom: 11px;
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .intro {
+    min-height: 861px;
+    padding-top: 64px;
+    padding-bottom: 0;
+    padding-left: 119px;
+
+    &::before {
+      display: none;
+    }
+
+    &__title {
+      width: 430px;
+      margin: 0;
+      margin-bottom: 39px;
+
+      font-size: 60px;
+      line-height: 60px;
+      color: $black;
+      text-align: left;
+    }
+
+    &__slogan {
+      width: 430px;
+      margin: 0;
+      margin-bottom: 47px;
+      font-size: 20px;
+      line-height: 20px;
+      color: $black;
+      text-align: left;
+    }
+
+    &__img {
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__btn {
+      width: 245px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    min-height: 655px;
+    position: static;
+    padding-top: 114px;
+    padding-left: 80px;
+
+    &::after {
+      content: "";
+      width: 50%;
+      min-height: 696px;
+      background-color: #64a83b;
+      background-image: url(../../img/index-header-bg-desktop.jpg);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0%;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      z-index: -100;
+    }
+
+    &__slogan {
+      margin-bottom: 52px;
+    }
   }
 }

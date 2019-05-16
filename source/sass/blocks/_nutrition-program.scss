@@ -3,13 +3,14 @@
 $bg-color: #f2f2f2;
 $arrow-color: #3e4242;
 $arrow-line-width: 17px;
-$arrow-triangle-size: 7px;
+$arrow-triangle-size: 6px;
 $arrow-position-x: 33px;
 $line-description-color: #d9d9d9;
 
 .nutrition-program {
+  box-sizing: border-box;
   background-color: $bg-color;
-  padding-top: 31px;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -83,6 +84,77 @@ $line-description-color: #d9d9d9;
 
     &:hover::after {
       left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width + 9px}));
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  $arrow-position-x: 22px;
+
+  .nutrition-program {
+    padding-top: 78px;
+    padding-left: 53px;
+    padding-right: 280px;
+    padding-bottom: 40px;
+
+    &__title {
+      margin-bottom: 23px;
+      padding: 0;
+      font-size: 36px;
+      line-height: 37px;
+    }
+
+    &__description {
+      margin-bottom: 36px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 20px;
+      transition: opacity 150ms;
+
+      &::before {
+        left: calc(100% - #{$arrow-position-x});
+      }
+
+      &::after {
+        left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width}));
+      }
+
+      &:hover::before {
+        width: $arrow-line-width + 9px;
+      }
+
+      &:hover::after {
+        left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width + 9px}));
+      }
+
+      &:active {
+        opacity: .3;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-program {
+    width: 570px;
+    padding-top: 78px;
+    padding-bottom: 40px;
+    padding-left: 52px;
+    padding-right: 50px;
+
+    &__title {
+      padding-left: 161px;
+      margin-bottom: 72px;
+    }
+
+    &__description {
+      margin-bottom: 11px;
     }
   }
 }

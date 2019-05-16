@@ -13,5 +13,42 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    &:last-of-type br {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nutrition-programs {
+    &__item {
+      margin-bottom: 30px;
+
+      &:last-of-type br {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nutrition-programs {
+
+    &__item {
+      margin: 0;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      &:last-of-type br {
+        display: none;
+      }
+    }
   }
 }

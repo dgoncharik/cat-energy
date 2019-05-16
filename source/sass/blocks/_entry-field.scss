@@ -86,3 +86,19 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .entry-field {
+
+    &__label {
+      margin-right: 17px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__input {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}

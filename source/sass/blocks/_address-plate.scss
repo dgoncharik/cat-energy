@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  background-color: #fff;
 
   &__invitation {
     width: 125px;
@@ -32,7 +33,63 @@
     color: $gray;
     font-weight: 400;
   }
-  &--grey {
+
+  &--another-color {
     background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .address-plate {
+    padding-top: 63px;
+    padding-bottom: 58px;
+
+    &__invitation {
+      width: 195px;
+      margin-right: 236px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__address {
+      width: 195px;
+      font-size: 16px;
+      text-align: right;
+    }
+
+    &__city {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address-plate {
+    width: 570px;
+    padding-top: 62px;
+    padding-bottom: 59px;
+    padding-right: 76px;
+    padding-left: 76px;
+    justify-content: space-between;
+
+    &__invitation {
+      width: 168px;
+      margin-right: 0px;
+    }
+
+    &__address {
+      width: 168px;
+      text-align: left;
+    }
+
+    &__city {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    &--another-color {
+      background-color: #fff;
+    }
   }
 }

@@ -5,13 +5,15 @@
   &__subtitle {
     padding-top: 29px;
     padding-bottom: 33px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   &__description {
-    width: 270px;
     margin: 0;
     margin-bottom: 38px;
     padding: 0;
+    padding-right: 20px;
     font-size: 14px;
     line-height: 18px;
     color: $black;
@@ -26,5 +28,112 @@
 
   &__note {
     margin-bottom: 32px;
+  }
+
+  &__basic-data {
+    margin-bottom: 23px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire {
+
+    &__subtitle {
+      padding: 0;
+      font-size: 36px;
+      line-height: 36px;
+      margin-left: -40px;
+
+      &::after {
+        width: calc(100% + 107px);
+      }
+    }
+
+    &__description {
+      margin-top: 53px;
+      margin-bottom: 65px;
+      padding-right: 330px;
+      padding-left: 40px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__item {
+      padding-left: 40px;
+      padding-right: 37px;
+    }
+
+    &__basic-data {
+      margin-bottom: 71px;
+    }
+
+    &__additionally {
+      margin-bottom: 22px;
+    }
+
+    &__btn {
+      margin: 0;
+      margin-left: 40px;
+      padding: 16px 20px;
+      width: 283px;
+    }
+
+    &__note {
+      min-height: 25px;
+      vertical-align: middle;
+      margin: 0;
+      margin-left: 58px;
+      width: 245px;
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire {
+    &__subtitle {
+      margin-left: 0;
+
+      &::after {
+        width: 100vw;
+      }
+    }
+
+    &__description {
+      padding: 0;
+      padding-right: 840px;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      padding: 0;
+    }
+
+    &__basic-data {
+      width: 570px;
+      margin-bottom: 0;
+    }
+
+    &__program-selection {
+      width: 570px;
+    }
+
+    &__additionally {
+      margin-bottom: 29px;
+    }
+
+    &__btn {
+      width: 570px;
+      margin-left: 0;
+    }
+
+    &__note {
+      margin-left: 77px;
+    }
   }
 }

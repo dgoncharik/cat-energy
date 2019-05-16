@@ -1,14 +1,14 @@
 @import '../variables', '../mixins';
 
 .how-it-works {
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 
   &__title {
     margin: 0;
 
     padding: 0;
-    padding-top: 17px;
-    padding-bottom: 23px;
+    padding-top: 19px;
+    padding-bottom: 26px;
     font-size: 36px;
     line-height: 60px;
     font-weight: 400;
@@ -19,19 +19,127 @@
   }
 
   &__item {
-    min-height: 60px;
-    padding-left: 80px;
     margin-bottom: 20px;
   }
 
   &__description {
+    min-height: 60px;
     margin: 0;
     padding: 0;
-    padding-top: 4px;
+    padding-left: 80px;
+    padding-top: 3px;
     font-family: $additional-font-family;
     font-size: 14px;
     line-height: 18px;
     color: $gray;
+    box-sizing: border-box;
+    position: relative;
 
+    &::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-color: #68b738;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .how-it-works {
+    position: relative;
+    padding: 0;
+    counter-reset: number;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      background-color: #e6e6e6;
+      position: absolute;
+    }
+
+    &__list {
+      padding-bottom: 39px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 45.7%;
+      padding-top: 69px;
+      padding-bottom: 64px;
+      margin-bottom: 0;
+      position: relative;
+
+      &::before {
+        counter-increment: number;
+        content: counter(number);
+        font-family: $main-font-family;
+        font-size: 281px;
+        line-height: 281px;
+        color: #f2f2f2;
+        font-weight: 400;
+        z-index: -1;
+        position: absolute;
+        top: 40px;
+        right: 23%;
+      }
+
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      padding-top: 48px;
+      padding-bottom: 0px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0;
+      padding-top: 112px;
+      padding-right: 59px;
+
+      &::before {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .how-it-works {
+
+    &::after {
+      display: none;
+    }
+
+    &__list {
+      padding-bottom: 0;
+    }
+
+    &__item {
+      width: 245px;
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &__title {
+      padding-top: 76px;
+    }
+
+    &__description {
+      padding-right: 0;
+    }
   }
 }

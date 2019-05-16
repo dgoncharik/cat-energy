@@ -2,6 +2,7 @@
 
 .product {
   display: flex;
+  // justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 24px;
   position: relative;
@@ -25,8 +26,8 @@
   }
 
   &__description {
-    width: 140px;
-    flex-grow: 1;
+    width: 50%;
+    flex-grow: 0;
   }
 
   &__link-for-title {
@@ -34,7 +35,7 @@
   }
 
   &__title {
-    width: 95px;
+    width: 70%;
     margin: 0;
     margin-top: 23px;
     margin-bottom: 10px;
@@ -69,5 +70,78 @@
   &__btn {
     width: 100%;
     margin-top: 1px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, transparent 83px, #f2f2f2 83px);
+    box-sizing: border-box;
+
+    &::after {
+      display: none;
+    }
+
+    &__link-for-img {
+      width: 100%;
+      display: block;
+    }
+
+    &__img {
+      width: 100%;
+      height: 208px;
+
+    }
+
+    &__description {
+      width: 100%;
+      flex-grow: 1;
+    }
+
+    &__title {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &__specifications {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    &__specifications tr {
+      display: flex;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    &__characteristic,
+    &__characteristic-value {
+      width: 50%;
+      padding-top: 8px;
+      padding-bottom: 7px;
+    }
+
+    &__btn {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    &__title {
+      width: 135px;
+    }
   }
 }

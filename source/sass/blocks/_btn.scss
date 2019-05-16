@@ -35,3 +35,11 @@ $text-color: #ffffff;
     color: rgba($text-color, .3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .btn {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    font-size: 20px;
+  }
+}

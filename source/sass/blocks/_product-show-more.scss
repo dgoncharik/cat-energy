@@ -1,9 +1,12 @@
 @import 'variables', 'mixins';
 
+
+
 .product-show-more {
   padding-top: 81px;
   padding-bottom: 25px;
   position: relative;
+  box-sizing: border-box;
 
   &__title {
     margin: 0;
@@ -50,14 +53,14 @@
   }
 
     &::before {
-      content: url("data:image/svg+xml,%3Csvg version='1.1' width='30' height='30' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' xml:space='preserve'%3E%3Cpolygon class='st0' points='30,14 16,14 16,0 14,0 14,14 0,14 0,16 14,16 14,30 16,30 16,16 30,16 '/%3E%3C/svg%3E");
+      content: url(../../img/icon-plus.svg);
       width: 30px;
       height: 30px;
       position: absolute;
       left: 50%;
       top: 27px;
       transform: translateX(-50%);
-      opacity: .2;
+      opacity: .7;
     }
 
     &::after {
@@ -68,5 +71,41 @@
     position: absolute;
     bottom: 0;
     left: -20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-show-more {
+    border: 1px solid #e6e6e6;
+    padding-top: 165px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 38px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      top: 54px;
+      opacity: .2;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &__title {
+      width: 175px;
+      font-size: 20px;
+      margin: 0 auto;
+      margin-bottom: 23px;
+    }
+
+    &__description {
+      width: 175px;
+      margin: 0 auto;
+      margin-bottom: 83px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }

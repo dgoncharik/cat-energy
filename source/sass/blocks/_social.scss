@@ -7,9 +7,6 @@ $img-color-active: rgba($img-color-hvr, .3);
 
 .social {
   @include list-reset;
-  min-height: 64px;
-  border-top: $border;
-  border-bottom: $border;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -36,6 +33,37 @@ $img-color-active: rgba($img-color-hvr, .3);
 
     &:active {
       fill: $img-color-active;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    &__item {
+      width: 30px;
+      height: 30px;
+      margin: 0 9px;
+
+      &--vk {
+        .social__img {
+          width: 30px;
+          height: 16px;
+        }
+      }
+
+      &--insta {
+        .social__img {
+          width: 23px;
+          height: 23px;
+        }
+      }
+
+      &--fb {
+        .social__img {
+          width: 14px;
+          height: 28px;
+        }
+      }
     }
   }
 }

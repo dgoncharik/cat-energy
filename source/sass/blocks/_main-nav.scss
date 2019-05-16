@@ -13,6 +13,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    position: static;
+
     &__list {
       // margin-left: -35px;
     }
@@ -20,5 +22,11 @@
     &__toogle-menu {
       display: none;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+
   }
 }

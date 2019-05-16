@@ -6,7 +6,8 @@
   border: none;
 
   &__title {
-    &::after {
+    &::after,
+    &::before {
       top: 44px;
     }
   }
@@ -16,6 +17,47 @@
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .owner-contacts {
+    &__title  {
+      margin-top: 77px;
+      margin-bottom: 74px;
+
+      &::after,
+      &::before {
+        top: 58%;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    &__entry-field {
+      margin-bottom: 19px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .owner-contacts {
+    &__title  {
+      margin-top: 71px;
+      margin-bottom: 74px;
+    }
+
+    &__flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__entry-field {
+      margin: 0px;
+      width: 570px;
     }
   }
 }
