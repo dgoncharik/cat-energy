@@ -98,6 +98,7 @@
 
     &__before-picture-wrapper {
       width: 50%;
+      background-color: #fff;
 
       &::after {
         content: "";
@@ -113,6 +114,7 @@
 
     &__after-picture-wrapper {
       width: 50%;
+      background-color: #fff;
 
       &::after {
         content: "";
@@ -221,7 +223,7 @@
     width: 610px;
     position: relative;
 
-        &__before-picture-wrapper {
+    &__before-picture-wrapper {
       width: 50%;
       padding-right: 20px;
     }
