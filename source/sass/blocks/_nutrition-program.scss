@@ -2,9 +2,8 @@
 
 $bg-color: #f2f2f2;
 $arrow-color: #3e4242;
-$arrow-line-width: 17px;
-$arrow-triangle-size: 6px;
-$arrow-position-x: 33px;
+$arrow-line-width: 18px;
+$arrow-triangle-size: 5.5px;
 $line-description-color: #d9d9d9;
 
 .nutrition-program {
@@ -42,55 +41,47 @@ $line-description-color: #d9d9d9;
 
   &__link {
     max-width: 100%;
+    padding-right: 10px;
     padding-top: 21px;
     padding-bottom: 21px;
-    padding-right: 45px;
     font-size: 16px;
     line-height: 16px;
     color: inherit;
     text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
-    position: relative;
+    display: inline-flex;
+    align-items: center;
 
     &::before, &::after {
       transition-property: left, width;
       transition-duration: .25s;
+      order: 2;
     }
 
     &::before {
       content: "";
-      position: absolute;
-      width: $arrow-line-width + 1;
+      width: $arrow-line-width;
+      margin-left: 11px;
       height: 3px;
+      display: block;
       background-color: $arrow-color;
-      left: calc(100% - #{$arrow-position-x});
-      top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-1px);
     }
 
     &::after {
       content: "";
-      position: absolute;
+      display: block;
       @include triangle(right, $arrow-triangle-size, $arrow-color);
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width}));
+      transform: translateY(-1px);
     }
 
     &:hover::before {
       width: $arrow-line-width + 9px;
     }
-
-    &:hover::after {
-      left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width + 9px}));
-    }
   }
 }
 
 @media (min-width: $tablet-width) {
-  $arrow-position-x: 22px;
-
   .nutrition-program {
     padding-top: 78px;
     padding-left: 53px;
@@ -118,19 +109,11 @@ $line-description-color: #d9d9d9;
       transition: opacity 150ms;
 
       &::before {
-        left: calc(100% - #{$arrow-position-x});
-      }
-
-      &::after {
-        left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width}));
+        margin-left: 22px;
       }
 
       &:hover::before {
         width: $arrow-line-width + 9px;
-      }
-
-      &:hover::after {
-        left: calc(100% - (#{$arrow-position-x} - #{$arrow-line-width + 9px}));
       }
 
       &:active {
