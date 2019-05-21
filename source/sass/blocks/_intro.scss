@@ -11,14 +11,21 @@
     content: "";
     width: 100%;
     height: 305px;
-    background-image: url(../../img/background-intro-mobile.jpg),
+    background-image: url(../../img/background-intro-mobile@1x.jpg),
                       linear-gradient(to right, #65a93c 48%, #63a73a 52%);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
     top: 0;
     left: 0px;
     position: absolute;
     z-index: -100;
+
+    @media (min-resolution: $retina-dpi),
+           (min-resolution: $retina-dppx) {
+            background-image: url(../../img/background-intro-mobile@2x.jpg),
+                              linear-gradient(to right, #65a93c 48%, #63a73a 52%);
+           }
   }
 
   &__title {
@@ -44,7 +51,6 @@
 
   &__img {
     width: 280px;
-    height: 271px;
     display: block;
     margin: 0 auto;
     margin-bottom: 2px;
@@ -62,7 +68,7 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    min-height: 861px;
+    min-height: 871px;
     padding-top: 64px;
     padding-bottom: 0;
     padding-left: 119px;
@@ -93,8 +99,12 @@
     }
 
     &__img {
+      width: 709px;
       position: absolute;
-      z-index: -1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -5;
     }
 
     &__btn {
@@ -109,7 +119,7 @@
 
 @media (min-width: $desktop-width) {
   .intro {
-    min-height: 655px;
+    min-height: 665px;
     position: static;
     padding-top: 114px;
     padding-left: 80px;
@@ -119,7 +129,7 @@
       width: 50%;
       min-height: 696px;
       background-color: #64a83b;
-      background-image: url(../../img/index-header-bg-desktop.jpg);
+      background-image: url(../../img/index-bg-desktop@1x.jpg);
       position: absolute;
       background-repeat: no-repeat;
       background-position: 0%;
@@ -127,10 +137,21 @@
       top: 0;
       right: 0;
       z-index: -100;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url(../../img/index-bg-desktop@2x.jpg);
+      }
     }
 
     &__slogan {
       margin-bottom: 52px;
+    }
+
+    &__img {
+      width: 552px;
+      top: 142px;
+      transform: translateX(-29%);
     }
   }
 }

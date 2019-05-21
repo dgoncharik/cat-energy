@@ -12,17 +12,54 @@ $line-description-color: #d9d9d9;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
 
   &__title {
     margin: 0;
     margin-bottom: 28px;
     padding: 0px;
-    padding-left: 70px;
+    margin-left: 70px;
     padding-right: 15px;
     font-size: 24px;
     line-height: 37px;
     font-weight: 400;
     text-transform: uppercase;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background-color: #68b738;
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+
+    &--losing-weight {
+      &::after {
+        width: 35px;
+        height: 49px;
+        background-image: url(../../img/icon-cat-slim.svg);
+        top: -1px;
+        left: 8px;
+      }
+    }
+
+    &--weight-gain {
+      &::after {
+        width: 67px;
+        height: 28px;
+        background-image: url(../../img/icon-cat-pro.svg);
+        top: 11px;
+        left: -9px;
+      }
+    }
   }
 
   &__description {
@@ -88,7 +125,34 @@ $line-description-color: #d9d9d9;
     padding-right: 280px;
     padding-bottom: 40px;
 
+    &__icon {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: auto;
+      right: 62px;
+
+      &--losing-weight {
+        &::after {
+          width: 140px;
+          height: 194px;
+          top: -12px;
+          left: 30px;
+        }
+      }
+
+      &--weight-gain {
+        &::after {
+          width: 268px;
+          height: 112px;
+          top: 43px;
+          left: -36px;
+        }
+      }
+    }
+
     &__title {
+      margin: 0;
       margin-bottom: 23px;
       padding: 0;
       font-size: 36px;
@@ -131,8 +195,34 @@ $line-description-color: #d9d9d9;
     padding-left: 52px;
     padding-right: 50px;
 
+    &__icon {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+      right: auto;
+
+      &--losing-weight {
+        &::after {
+          width: 70px;
+          height: 97px;
+          top: -6px;
+          left: 14px;
+        }
+      }
+
+      &--weight-gain {
+        &::after {
+          width: 134px;
+          height: 56px;
+          top: 22px;
+          left: -18px;
+        }
+      }
+    }
+
     &__title {
-      padding-left: 161px;
+      margin-left: 161px;
       margin-bottom: 72px;
     }
 

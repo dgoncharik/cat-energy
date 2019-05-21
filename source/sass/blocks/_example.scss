@@ -1,6 +1,7 @@
 @import '../variables', '../mixins';
 
 .example {
+  overflow: hidden;
   padding-bottom: 30px;
   position: relative;
 
@@ -37,7 +38,7 @@
   }
 
   &__row {
-    margin-bottom: 42px;
+    margin-bottom: 34px;
   }
 
   &__price {
@@ -134,11 +135,11 @@
     padding: 0;
 
     &::after {
-      background-image: linear-gradient(to right, #f2f2f2 51%, #eaeaea 51%);
+      background-image: linear-gradient(to right, #f2f2f2 52%, #eaeaea 52%);
     }
 
     &__content {
-      width: 570px;
+      width: 465px;
     }
 
     &__flex-wrapper {
@@ -149,11 +150,11 @@
     &__title {
       padding-top: 65px;
       padding-bottom: 144px;
-      padding-right: 135px;
+      padding-right: 30px;
     }
 
     &__text {
-      padding-right: 135px;
+      padding-right: 30px;
       margin-bottom: 67px;
     }
 

@@ -55,23 +55,29 @@
     <section class="intro page-main__intro container">
       <h2 class="intro__title">Функциональное питание для котов</h2>
       <b class="intro__slogan">Занялся собой? Займись котом!</b>
-      <img class="intro__img" src="img/cat-energy-preview.png" width="280" height="271" alt="Cat Energy Pro" >
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/cat-energy-preview-desktop@1x.png 1x, img/cat-energy-preview-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/cat-energy-preview-tablet@1x.jpg 1x, img/cat-energy-preview-tablet@2x.jpg 2x">
+        <img class="intro__img" src="img/cat-energy-preview-mobile@1x.png" srcset="img/cat-energy-preview-mobile@2x.png 2x" alt="Cat Energy Pro">
+      </picture>
       <a href="#" class="btn intro__btn">Подобрать программу</a>
     </section>
 
     <section class="nutrition-programs page-main__nutrition-programs container">
       <h2 class="visually-hidden">Программы питания</h2>
       <ul class="nutrition-programs__list">
-        <li class="nutrition-program nutrition-programs__item nutrition-program--losing-weight">
+        <li class="nutrition-program nutrition-programs__item">
           <h3 class="nutrition-program__title">Похудение</h3>
+          <span class="nutrition-program__icon nutrition-program__icon--losing-weight"></span>
           <p class="nutrition-program__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a href="#" class="nutrition-program__link">Каталог Slim</a>
         </li>
-        <li class="nutrition-program nutrition-programs__item nutrition-program--weight-gain">
+        <li class="nutrition-program nutrition-programs__item">
           <h3 class="nutrition-program__title">Набор массы</h3>
+          <span class="nutrition-program__icon nutrition-program__icon--weight-gain"></span>
           <p class="nutrition-program__description">
             Заработать авторитет среди дворовых котов и&nbsp;даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br> мышцы!
@@ -140,10 +146,18 @@
         <div class="comparisons example__comparisons">
           <div class="comparisons__pictures">
             <div class="comparisons__before-picture-wrapper">
-              <img class="comparisons__picture comparisons__picture--before-img" src="img/slider-before-mobile.png" alt="Большой кот">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/slider-before-desktop@1x.png 1x, img/slider-before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-before-tablet@1x.png 1x, img/slider-before-tablet@2x.png 2x">
+                <img class="comparisons__picture comparisons__picture--before-img" src="img/slider-before-mobile@1x.png" srcset="img/slider-before-mobile@2x.png 2x" alt="Большой кот">
+              </picture>
             </div>
             <div class="comparisons__after-picture-wrapper">
-              <img class="comparisons__picture comparisons__picture--after-img" src="img/slider-after-mobile.png" alt="Стройный кот">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/slider-after-desktop@1x.png 1x, img/slider-after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-after-tablet@1x.png 1x, img/slider-after-tablet@2x.png 2x">
+                <img class="comparisons__picture comparisons__picture--after-img" src="img/slider-after-mobile@1x.png" srcset="img/slider-after-mobile@2x.png 2x" alt="Стройный кот">
+              </picture>
             </div>
           </div>
           <div class="comparisons__range">
@@ -160,7 +174,7 @@
 
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
-    <div class="map__wrapper">
+    <div class="map__address-plate-container">
       <div class="address-plate map__address-plate">
         <h2 class="visually-hidden">Адрес</h2>
         <b class="address-plate__invitation">Приглашаем <br> к сотрудничеству дилеров!</b>
@@ -168,7 +182,14 @@
           ул. Большая Конюшенная, д. 19/8 <span class="address-plate__city">Санкт-Петербург</span>
         </p>
       </div>
-      <img class="map__img" src="img/map-desktop.jpg" width="320" height="400" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+    </div>
+    <div class="map__wrapper">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
+        <img class="map__img" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+      </picture>
+      <iframe class="map__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d499.6492357205944!2d30.322451907865144!3d59.938830045879385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1558445137791!5m2!1sru!2sby" width="320" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </section>
 

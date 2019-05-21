@@ -16,7 +16,8 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
+    background-color: #f2f2f2;
   }
 
   &__after-picture-wrapper {
@@ -24,27 +25,30 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     right: 0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    background-color: #f2f2f2;
   }
 
   &__picture {
     max-width: none;
+    width: 320px;
+    position: absolute;
 
     &--before-img {
 
     }
 
     &--after-img {
-
+      right: 0;
     }
   }
 
   &__range {
-    margin-top: 19px;
+    margin-top: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +101,7 @@
     }
 
     &__before-picture-wrapper {
-      width: 50%;
+      width: 100%;
       background-color: #fff;
 
       &::after {
@@ -129,26 +133,25 @@
     }
 
     &__picture {
+      width: 690px;
 
       &--before-img {
-
+        top: 6px;
+        left: 46px;
       }
 
       &--after-img {
-
+        top: 6px;
+        right: 32px;
       }
     }
 
     &__range {
-      // width: 100%;
       width: 570px;
       margin: 0;
       margin-top: -32px;
       position: relative;
       bottom: 68px;
-      // position: absolute;
-      // bottom: 68px;
-      // z-index: 5;
     }
 
     &__progress {
@@ -220,17 +223,9 @@
 
  @media (min-width: $desktop-width) {
   .comparisons {
-    width: 610px;
+    // width: 650px;
+    width: 670px;
     position: relative;
-
-    &__before-picture-wrapper {
-      width: 50%;
-      padding-right: 20px;
-    }
-
-    &__after-picture-wrapper {
-      width: 50%;
-    }
 
     &__pictures {
       width: 100%;
@@ -238,9 +233,35 @@
       padding-bottom: 129px;
     }
 
+    &__before-picture-wrapper {
+      width: 100%;
+      padding-right: 40px;
+    }
+
+    &__after-picture-wrapper {
+      width: 50%;
+      // right: -40px;
+      right: -50px;
+    }
+
+    &__picture {
+      width: 690px;
+
+      &--before-img {
+        top: 7px;
+        left: 20px;
+      }
+
+      &--after-img {
+        top: 7px;
+        right: 10px;
+      }
+    }
+
     &__range {
       width: 100%;
-      left: 20px;
+      // left: 40px;
+      left: 50px;
     }
   }
 }

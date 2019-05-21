@@ -5,7 +5,6 @@
 
   &__title {
     margin: 0;
-
     padding: 0;
     padding-top: 19px;
     padding-bottom: 26px;
@@ -20,6 +19,50 @@
 
   &__item {
     margin-bottom: 20px;
+
+    &:nth-child(1) {
+      .how-it-works__description::before {
+          background-image: url(../../img/how-it-works-1@1x.png);
+
+          @media (min-resolution: $retina-dpi),
+                 (min-resolution: $retina-dppx) {
+            background-image: url(../../img/how-it-works-1@2x.png);
+          }
+      }
+    }
+
+    &:nth-child(2) {
+      .how-it-works__description::before {
+          background-image: url(../../img/how-it-works-2@1x.png);
+
+          @media (min-resolution: $retina-dpi),
+                 (min-resolution: $retina-dppx) {
+            background-image: url(../../img/how-it-works-2@2x.png);
+          }
+      }
+    }
+
+    &:nth-child(3) {
+      .how-it-works__description::before {
+          background-image: url(../../img/how-it-works-3@1x.png);
+
+          @media (min-resolution: $retina-dpi),
+                 (min-resolution: $retina-dppx) {
+            background-image: url(../../img/how-it-works-3@2x.png);
+          }
+      }
+    }
+
+    &:nth-child(4) {
+      .how-it-works__description::before {
+          background-image: url(../../img/how-it-works-4@1x.png);
+
+          @media (min-resolution: $retina-dpi),
+                 (min-resolution: $retina-dppx) {
+            background-image: url(../../img/how-it-works-4@2x.png);
+          }
+      }
+    }
   }
 
   &__description {
@@ -40,6 +83,9 @@
       width: 60px;
       height: 60px;
       background-color: #68b738;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50px 50px;
       position: absolute;
       left: 0;
       top: 0;
