@@ -102,8 +102,8 @@
       width: 709px;
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 50%;
+      transform: translateX(50%);
       z-index: -5;
     }
 
@@ -151,7 +151,7 @@
     &__img {
       width: 552px;
       top: 142px;
-      transform: translateX(-29%);
+      transform: translateX(71%);
     }
   }
 }
