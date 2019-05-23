@@ -70,6 +70,8 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
   &--phone {
     .entry-field__icon {
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       left: calc(100% - 33px);
     }
 
