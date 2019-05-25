@@ -1,5 +1,7 @@
 @import '../variables', '../mixins';
 
+// Переменные для бургера "tooglle-menu" находятся в файле "_toogle-menu.scss"
+
 .main-nav {
   position: relative;
 
@@ -14,6 +16,16 @@
 
   &__list {
     display: none;
+  }
+
+  &--no-js {
+    .main-nav__toogle-menu {
+      display: none;
+    }
+
+    .main-nav__list {
+      display: flex;
+    }
   }
 
   &--opened {

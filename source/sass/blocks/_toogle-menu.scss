@@ -16,10 +16,6 @@ $burger-transition-duration: .4s;
   cursor: pointer;
   display: block;
 
-  &--hide {
-    display: none;
-  }
-
   // &--opened {
   //   .toogle-menu__burger {
   //     background-color: transparent;
