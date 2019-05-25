@@ -78,13 +78,21 @@ $box-shadow: inset 0px 0px 0px $box-shadow-width $box-shadow-color;
     .entry-field__input {
       padding-right: 45px;
 
-    &:focus {
+    &:valid:focus {
       ~ .entry-field__icon {
         fill: #68b738;
       }
+    }
+
+    &:invalid:focus {
+      box-shadow: inset 0px 0px 0px $box-shadow-width + 1 $color-error;
+
+      ~ .entry-field__icon {
+        fill: $color-error;;
       }
     }
   }
+}
 
   &--error {
     .entry-field__icon {
