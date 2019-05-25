@@ -14,6 +14,35 @@ $burger-transition-duration: .4s;
   outline: none;
   vertical-align: middle;
   cursor: pointer;
+  display: block;
+
+  &--hide {
+    display: none;
+  }
+
+  // &--opened {
+  //   .toogle-menu__burger {
+  //     background-color: transparent;
+  
+  //     &::before {
+  //       top: 0;
+  //       transform: rotate(45deg);
+  //     }
+  
+  //     &::after {
+  //       top: -$height-line-burger;
+  //       transform: rotate(-45deg);
+  //     }
+  //   }
+  // }
+
+  // &:not(&--opened) {
+  //   .toogle-menu__burger {
+  //     &::before, &::after {
+  //       transition: transform $burger-transition-duration, top $burger-transition-duration $burger-transition-duration;
+  //     }
+  //   }
+  // }
 
   &__burger {
     width: $width-line-burger;
@@ -44,24 +73,24 @@ $burger-transition-duration: .4s;
       top: $burger-vertical-distance;
     }
 
-    &--opened {
-      background-color: transparent;
+    // &--opened {
+    //   background-color: transparent;
 
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
-      }
+    //   &::before {
+    //     top: 0;
+    //     transform: rotate(45deg);
+    //   }
 
-      &::after {
-        top: -$height-line-burger;
-        transform: rotate(-45deg);
-      }
-    }
+    //   &::after {
+    //     top: -$height-line-burger;
+    //     transform: rotate(-45deg);
+    //   }
+    // }
 
-    &:not(&--opened) {
-      &::before, &::after {
-        transition: transform $burger-transition-duration, top $burger-transition-duration $burger-transition-duration;
-      }
-    }
+    // &:not(&--opened) {
+    //   &::before, &::after {
+    //     transition: transform $burger-transition-duration, top $burger-transition-duration $burger-transition-duration;
+    //   }
+    // }
   }
 }

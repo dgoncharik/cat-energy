@@ -1,11 +1,29 @@
 @import '../variables', '../mixins';
 
 .page-header {
+  &__logo-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: #e6e6e6;
+      left: -20px;
+      bottom: 0;
+      position: absolute;
+    }
+
+  }
+
   &__logo {
-    min-height: 65px;
-    margin-right: -20px;
-    margin-left: -20px;
-    border-bottom: 1px solid #e6e6e6;
+    width: 191px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+    }
   }
 }
 
@@ -15,11 +33,17 @@
     display: flex;
     justify-content: space-between;
 
+    &__logo-wrapper {
+      &::after {
+        display: none;
+      }
+    }
+
     &__logo {
+      width: 176px;
       margin: 0;
       min-width: 192px;
       min-height: auto;
-      border: none;
     }
 
     &__main-nav {
@@ -33,7 +57,7 @@
     padding-top: 56px;
 
     &__logo {
-
+      width: 208px;
     }
   }
 }
