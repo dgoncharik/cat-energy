@@ -41,23 +41,18 @@
 
     &__logo {
       width: 176px;
-      margin: 0;
-      min-width: 192px;
+      margin-right: 50px;
       min-height: auto;
-    }
-
-    &__main-nav {
-      
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding-top: 56px;
+    padding-top: 53px;
 
     &__logo {
-      width: 208px;
+      width: 202px;
     }
   }
 }

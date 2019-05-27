@@ -68,8 +68,8 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    min-height: 871px;
-    padding-top: 64px;
+    min-height: 866px;
+    padding-top: 59px;
     padding-bottom: 0;
     padding-left: 119px;
 
@@ -119,9 +119,9 @@
 
 @media (min-width: $desktop-width) {
   .intro {
-    min-height: 665px;
+    min-height: 661px;
     position: static;
-    padding-top: 114px;
+    padding-top: 110px;
     padding-left: 80px;
 
     &::after {
