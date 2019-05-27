@@ -6,6 +6,8 @@ $border: 1px solid #d9d9d9;
   background-color: #f2f2f2;
 
   &__logo {
+    width: 130px;
+    margin: 0 auto;
     padding-top: 37px;
     padding-bottom: 30px;
     flex-shrink: 0;
@@ -29,7 +31,7 @@ $border: 1px solid #d9d9d9;
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding-top: 58px;
+    padding-top: 54px;
     padding-bottom: 58px;
 
     &__flex-wrapper {
@@ -39,8 +41,11 @@ $border: 1px solid #d9d9d9;
     }
 
     &__logo {
-      width: 162px;
+      width: 130px;
       padding: 0px;
+      padding-top: 3px;
+      margin: 0;
+      margin-right: 32px;
     }
 
     &__social {
@@ -55,5 +60,11 @@ $border: 1px solid #d9d9d9;
       width: 162px;
       padding: 0;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding-top: 58px;
   }
 }

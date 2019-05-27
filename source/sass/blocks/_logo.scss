@@ -1,8 +1,8 @@
 @import '../variables', '../mixins';
 
 .logo {
-  // padding-top: 24px;
-  // padding-bottom: 24px;
+  padding-top: 12px;
+  padding-bottom: 14px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -10,12 +10,9 @@
   transition: opacity 150ms;
 
   &__img {
-    width: 33px;
-    height: 38px;
-  }
-
-  &__text {
-
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   &:hover,

@@ -4,6 +4,8 @@ $border: 1px solid #e6e6e6;
 
 .site-list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
 
   &__item {
     font-weight: 500;
@@ -43,14 +45,16 @@ $border: 1px solid #e6e6e6;
 @media (min-width: $tablet-width) {
   .site-list {
     max-width: 600px;
+    padding-top: 7px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     box-sizing: border-box;
     flex-wrap: wrap;
 
     &__item {
       margin-left: 35px;
-      padding-top: 19px;
+      padding-top: 12px;
       padding-bottom: 12px;
       position: relative;
 
@@ -79,13 +83,10 @@ $border: 1px solid #e6e6e6;
 @media (min-width: $desktop-width) {
   .site-list {
     width: 610px;
+    padding-top: 10px;
     max-width: 650px;
     box-sizing: border-box;
     justify-content: flex-end;
-
-    &__item {
-
-    }
 
     &__link {
       font-size: 20px;
