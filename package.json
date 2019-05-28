@@ -3,26 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0",
-    "static-eval": "^2.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.5",
-    "gulp-autoprefixer": "^6.0.0",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-stylelint": "^8.0.0",
-    "gulp-tinypng-unlimited": "^1.0.3",
-    "gulp.spritesmith": "^6.9.0",
-    "stylelint": "^9.10.1"
+    "node-sass": "^4.12.0"
   },
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dgoncharik/cat-energy.git"
