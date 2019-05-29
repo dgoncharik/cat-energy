@@ -98,7 +98,10 @@ gulp.task("fonts", function() {
 })
 
 gulp.task("optim-img", function() {
-  return gulp.src(path.source.img + "/**/*.{png,jpg,svg}")
+  return gulp.src([
+    path.source.img + "/**/*.{png,jpg,svg}",
+    "!" + path.source.svgSprite + "/**"
+  ])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
