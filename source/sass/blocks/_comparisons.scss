@@ -11,6 +11,11 @@
     position: relative;
   }
 
+  &__before-picture-wrapper,
+  &__after-picture-wrapper {
+    transition: width .5s;
+  }
+
   &__before-picture-wrapper {
     width: 100%;
     height: 100%;
