@@ -146,6 +146,10 @@
     </div>
     <div class="map__wrapper">
       <picture>
+        <source media="(min-width: 1300px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" type="image/webp">
+        <source srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" type="image/webp">
+
         <source media="(min-width: 1300px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
         <img class="map__img" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
