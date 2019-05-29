@@ -148,7 +148,7 @@ gulp.task("server", function() {
   });
    gulp.watch(path.source.html + "/*.html", gulp.series("html", "refresh"));
    gulp.watch(path.source.style + "/**/*.{scss,sass}", gulp.series("css"));
-   gulp.watch(path.source.img + "/**/*.{png,jpg}", gulp.series("copy-img"));
+   gulp.watch(path.source.img + "/**/*.*", gulp.series("copy-img"));
    gulp.watch(path.source.js + "/**/*.js", gulp.series("js"));
    gulp.watch(path.source.svgSprite + "/*.svg", gulp.series("svg-sprite", "html", "refresh"));
    gulp.watch(path.source.fonts + "/**/*.{woff,woff2}", gulp.series("fonts", "refresh"));
