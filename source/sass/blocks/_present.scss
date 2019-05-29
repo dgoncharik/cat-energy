@@ -8,7 +8,7 @@ $color-icon:  white;
   width: 100%;
   min-height: 289px;
   background-color: #6fb346;
-  background-image: url(../../img/bg-present-mobile@1x.jpg);
+  background-image: url(../img/bg-present-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -17,7 +17,7 @@ $color-icon:  white;
 
   @media (min-resolution: $retina-dpi),
          (min-resolution: $retina-dppx) {
-    background-image: url(../../img/bg-present-mobile@2x.jpg);
+    background-image: url(../img/bg-present-mobile@2x.jpg);
   }
 
   &::before {
@@ -48,11 +48,11 @@ $color-icon:  white;
     padding-top: 72px;
     padding-right: 100px;
     padding-left: 192px;
-    background-image: url(../../img/bg-present-tablet@1x.jpg);
+    background-image: url(../img/bg-present-tablet@1x.jpg);
 
     @media (min-resolution: $retina-dpi),
            (min-resolution: $retina-dppx) {
-      background-image: url(../../img/bg-present-tablet@2x.jpg);
+      background-image: url(../img/bg-present-tablet@2x.jpg);
     }
 
     &::before {
@@ -75,11 +75,11 @@ $color-icon:  white;
     padding: 0;
     width: 245px;
     padding-top: 188px;
-    background-image: url(../../img/bg-present-desktop@1x.jpg);
+    background-image: url(../img/bg-present-desktop@1x.jpg);
 
     @media (min-resolution: $retina-dpi),
            (min-resolution: $retina-dppx) {
-      background-image: url(../../img/bg-present-desktop@2x.jpg);
+      background-image: url(../img/bg-present-desktop@2x.jpg);
     }
 
     &::before {

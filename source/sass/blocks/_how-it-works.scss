@@ -22,44 +22,44 @@
 
     &:nth-child(1) {
       .how-it-works__description::before {
-          background-image: url(../../img/how-it-works-1@1x.png);
+          background-image: url(../img/how-it-works-1@1x.png);
 
           @media (min-resolution: $retina-dpi),
                  (min-resolution: $retina-dppx) {
-            background-image: url(../../img/how-it-works-1@2x.png);
+            background-image: url(../img/how-it-works-1@2x.png);
           }
       }
     }
 
     &:nth-child(2) {
       .how-it-works__description::before {
-          background-image: url(../../img/how-it-works-2@1x.png);
+          background-image: url(../img/how-it-works-2@1x.png);
 
           @media (min-resolution: $retina-dpi),
                  (min-resolution: $retina-dppx) {
-            background-image: url(../../img/how-it-works-2@2x.png);
+            background-image: url(../img/how-it-works-2@2x.png);
           }
       }
     }
 
     &:nth-child(3) {
       .how-it-works__description::before {
-          background-image: url(../../img/how-it-works-3@1x.png);
+          background-image: url(../img/how-it-works-3@1x.png);
 
           @media (min-resolution: $retina-dpi),
                  (min-resolution: $retina-dppx) {
-            background-image: url(../../img/how-it-works-3@2x.png);
+            background-image: url(../img/how-it-works-3@2x.png);
           }
       }
     }
 
     &:nth-child(4) {
       .how-it-works__description::before {
-          background-image: url(../../img/how-it-works-4@1x.png);
+          background-image: url(../img/how-it-works-4@1x.png);
 
           @media (min-resolution: $retina-dpi),
                  (min-resolution: $retina-dppx) {
-            background-image: url(../../img/how-it-works-4@2x.png);
+            background-image: url(../img/how-it-works-4@2x.png);
           }
       }
     }
