@@ -58,6 +58,14 @@ gulp.task("copy", function() {
   .pipe(gulp.dest(path.build.dir))
 });
 
+gulp.task("copy-img", function() {
+  return gulp.src([
+    path.source.img + "/**/*.*",
+    "!" + path.source.svgSprite + "/**", //не копировать папку с файлами для svg спрайта
+  ])
+  .pipe(gulp.dest(path.build.img))
+})
+
 gulp.task("html", function() {
   return gulp.src(path.source.html + "/*.html")
   .pipe(posthtml([
@@ -133,17 +141,18 @@ gulp.task("server", function() {
       server: {
           baseDir: path.build.dir
       },
-      notify: true,
-      tunnel: true,
-      host: "localhost",
-      port: 3000,
+      // notify: true,
+      // tunnel: true,
+      // host: "localhost",
+      // port: 3000,
   });
    gulp.watch(path.source.html + "/*.html", gulp.series("html", "refresh"));
    gulp.watch(path.source.style + "/**/*.{scss,sass}", gulp.series("css"));
+   gulp.watch(path.source.img + "/**/*.{png,jpg}", gulp.series("copy-img"));
    gulp.watch(path.source.js + "/**/*.js", gulp.series("js"));
    gulp.watch(path.source.svgSprite + "/*.svg", gulp.series("svg-sprite", "html", "refresh"));
    gulp.watch(path.source.fonts + "/**/*.{woff,woff2}", gulp.series("fonts", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "svg-sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "webp", "svg-sprite", "html"));
 gulp.task("default", gulp.series("build", "server"));
