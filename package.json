@@ -9,15 +9,24 @@
     "browser-sync": "^2.26.5",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
-    "gulp-minify-css": "^1.2.4",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "node-sass": "^4.12.0"
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^4.12.0",
+    "posthtml-include": "^1.2.0"
   },
   "scripts": {
     "start": "gulp",
+    "build": "gulp build",
+    "optim-img": "gulp optim-img",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
