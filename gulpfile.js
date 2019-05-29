@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
-var htmlmin = require('gulp-htmlmin');
+var htmlmin = require("gulp-htmlmin");
 var browserSync = require("browser-sync").create();
 var notify = require("gulp-notify");
 var rename = require("gulp-rename");
@@ -21,18 +21,18 @@ var path = {
   build: {
     dir: "build",
     html: "build",
-    css: 'build/css',
-    img: 'build/img',
-    fonts: 'build/fonts',
-    js: 'build/js'
+    css: "build/css",
+    img: "build/img",
+    fonts: "build/fonts",
+    js: "build/js"
   },
   source: {
     dir: "source",
     html: "source",
-    style: 'source/sass',
-    img: 'source/img',
-    fonts: 'source/fonts',
-    js: 'source/js',
+    style: "source/sass",
+    img: "source/img",
+    fonts: "source/fonts",
+    js: "source/js",
     ico: "source",
     svgSprite: "source/img/svg-sprite"
   }
@@ -51,6 +51,7 @@ gulp.task("copy", function() {
   return gulp.src([
     path.source.fonts + "/**/*.{woff,woff2}",
     path.source.img + "/**/*.*",
+    "!" + path.source.svgSprite + "/**", //не копировать папку с файлами для svg спрайта
     path.source.js + "/**/*.js",
     path.source.ico + "/*.ico"
   ], {base: path.source.dir})
@@ -114,6 +115,9 @@ gulp.task("webp", function() {
 
 gulp.task("svg-sprite", function() {
   return gulp.src(path.source.svgSprite + "/*.svg")
+  .pipe(imagemin([
+    imagemin.svgo()
+  ]))
   .pipe(svgstore({
     inlineSvg: true
   }))
@@ -128,7 +132,7 @@ gulp.task("server", function() {
       },
       notify: true,
       tunnel: true,
-      host: 'localhost',
+      host: "localhost",
       port: 3000,
   });
    gulp.watch(path.source.html + "/*.html", gulp.series("html", "refresh"));
