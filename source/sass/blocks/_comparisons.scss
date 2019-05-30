@@ -177,7 +177,8 @@
     &__toggle {
       width: 34px;
       height: 34px;
-      margin-left: -16px;
+      margin: 0px;
+      transform: translateX(-16px);
       border-radius: 50%;
       position: absolute;
       background-color: #fff;
