@@ -13,7 +13,7 @@
 
   &__before-picture-wrapper,
   &__after-picture-wrapper {
-    transition: width .5s;
+    transition: width .4s;
   }
 
   &__before-picture-wrapper {
@@ -78,11 +78,10 @@
     margin: 0 5px;
     background-color: rgb(104, 183, 56);
     border-radius: 6px;
-    // transition: transform .3s;
+    transition: left .4s;
     top: 3px;
     left: 0%;
     position: absolute;
-    // transform: translateX(100%);
   }
 
   &__btn {
