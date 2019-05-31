@@ -7,30 +7,28 @@ var btnBefore = range.querySelector('.comparisons__btn--before');
 var btnAfter = range.querySelector('.comparisons__btn--after');
 
 var mobileWidth = 320;
+var tabletWidth = 768;
+var desktopWidth = 1300;
 var windowWidth = document.body.clientWidth;
 
-var startingTooglePosition = '0%';
-var endTooglePosition = '45%';
+var getStyle = function (e, styleName) {
+  var styleValue = "";
+  if(document.defaultView && document.defaultView.getComputedStyle) {
+      styleValue = document.defaultView.getComputedStyle(e, "").getPropertyValue(styleName);
+  }
+  else if(e.currentStyle) {
+      styleName = styleName.replace(/\-(\w)/g, function (strMatch, p1) {
+          return p1.toUpperCase();
+      });
+      styleValue = e.currentStyle[styleName];
+  }
+  return styleValue;
+}
 
-// var getStyle = function (e, styleName) {
-//   var styleValue = "";
-//   if(document.defaultView && document.defaultView.getComputedStyle) {
-//       styleValue = document.defaultView.getComputedStyle(e, "").getPropertyValue(styleName);
-//   }
-//   else if(e.currentStyle) {
-//       styleName = styleName.replace(/\-(\w)/g, function (strMatch, p1) {
-//           return p1.toUpperCase();
-//       });
-//       styleValue = e.currentStyle[styleName];
-//   }
-//   return styleValue;
-// }
-
-console.log(toogle.offsetWidth)
+console.log('ccccc', getStyle(range, 'width'))
 
 btnBefore.addEventListener('click', function(evt) {
   evt.preventDefault();
-  console.log('before');
   imgAfter.style.width = '0%';
   toogle.style.left = '0%';
 })
@@ -41,20 +39,18 @@ btnAfter.addEventListener('click', function(evt) {
   var toogleMarginLeft = computedStyle.marginLeft;
   var toogleMarginRight = computedStyle.marginRight;
   var toogleWidth = computedStyle.width;
-  // var toogleWidth = toogle.offsetWidth;
-  console.log('after');
   imgAfter.style.width = '100%';
-  toogle.style.left = `calc(100% - (${toogleWidth} + ${toogleMarginLeft} + ${toogleMarginRight})`;
-  // toogle.style.left = `calc(100% - ${toogleWidth}px)`;
-  console.log(Number(toogleWidth))
-  console.log(`calc(100% - ${toogleWidth + toogleMarginLeft + toogleMarginRight})`)
+
+  if (windowWidth < tabletWidth) {
+    toogle.style.left = `calc(100% - (${toogleWidth} + ${toogleMarginLeft} + ${toogleMarginRight})`;
+  } else {
+    toogle.style.left = '100%';
+  }
 })
 
 window.onresize = function(event) {
   windowWidth = document.body.clientWidth;
-  console.log(windowWidth)
-
-  if (windowWidth > mobileWidth) {
-    console.log('bingo!!')
-  }
+    imgAfter.style = null;
+    imgBefore.style = null;
+    toogle.style = null;
 };
