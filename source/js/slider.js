@@ -1,35 +1,35 @@
-var slider = document.querySelector('.comparisons');
-var imgBefore = slider.querySelector('.comparisons__before-picture-wrapper');
-var imgAfter = slider.querySelector('.comparisons__after-picture-wrapper');
-var range = slider.querySelector('.comparisons__range');
-var progress = range.querySelector('.comparisons__progress');
-var toogle = range.querySelector('.comparisons__toggle');
-var btnBefore = range.querySelector('.comparisons__btn--before');
-var btnAfter = range.querySelector('.comparisons__btn--after');
+let slider = document.querySelector('.comparisons');
+let imgBefore = slider.querySelector('.comparisons__before-picture-wrapper');
+let imgAfter = slider.querySelector('.comparisons__after-picture-wrapper');
+let range = slider.querySelector('.comparisons__range');
+let progress = range.querySelector('.comparisons__progress');
+let tgl = range.querySelector('.comparisons__toggle');
+let btnBefore = range.querySelector('.comparisons__btn--before');
+let btnAfter = range.querySelector('.comparisons__btn--after');
 
-var mobileWidth = 320;
-var tabletWidth = 768;
-var desktopWidth = 1300;
-var windowWidth = document.body.clientWidth;
+let mobileWidth = 320;
+let tabletWidth = 768;
+let desktopWidth = 1300;
+let windowWidth = document.body.clientWidth;
 
 btnBefore.addEventListener('click', function(evt) {
   evt.preventDefault();
   imgAfter.style.width = '0%';
-  toogle.style.left = '0%';
+  tgl.style.left = '0%';
 })
 
 btnAfter.addEventListener('click', function(evt) {
   evt.preventDefault();
-  var computedStyle = getComputedStyle(toogle);
-  var toogleMarginLeft = computedStyle.marginLeft;
-  var toogleMarginRight = computedStyle.marginRight;
-  var toogleWidth = computedStyle.width;
+  let computedStyle = getComputedStyle(tgl);
+  let tglMarginLeft = computedStyle.marginLeft;
+  let tglMarginRight = computedStyle.marginRight;
+  let tglWidth = computedStyle.width;
   imgAfter.style.width = '100%';
 
   if (windowWidth < tabletWidth) {
-    toogle.style.left = `calc(100% - (${toogleWidth} + ${toogleMarginLeft} + ${toogleMarginRight})`;
+    tgl.style.left = `calc(100% - (${tglWidth} + ${tglMarginLeft} + ${tglMarginRight})`;
   } else {
-    toogle.style.left = '100%';
+    tgl.style.left = '100%';
   }
 })
 
@@ -37,24 +37,38 @@ window.onresize = function(evt) {
   windowWidth = document.body.clientWidth;
     imgAfter.style = null;
     imgBefore.style = null;
-    toogle.style = null;
+    tgl.style = null;
 };
 
-toogle.addEventListener('mousedown', function(evt) {
-  if (evt.which === 1) { // если клик левой кнопкой мыши
-    var toogleX = toogle.getBoundingClientRect().left + pageXOffset;
-    var progressX = progress.getBoundingClientRect().left + pageXOffset;
-    var progressWidth = progress.offsetWidth;
-    // var posLeft = toogle.offsetLeft;
-    console.log(progressX, toogleX, progressWidth);
+tgl.addEventListener('mousedown', function(evt) {
+  let progressX = progress.getBoundingClientRect().left + pageXOffset;
+  let tglX = tgl.getBoundingClientRect().left + pageXOffset;
+  // console.log(tglX, progressX);
 
-    window.onmousemove = function(evt) {
-      toogle.style.transition = 'none';
-      var newPos = evt.pageX;
-      console.log(newPos)
-      // toogle.style.left = newPos + 'px';
-
-      return false;
-    }
+  window.onmousemove = function(evt) {
+    tgl.style.transition = 'none';
+    let cursorX = evt.clientX;
+    let newPos = cursorX - progressX;
+    console.log(newPos)
+    tgl.style.left = newPos + 'px';
   }
 })
+
+// tgl.addEventListener('mousedown', function(evt) {
+//   // if (evt.which === 1) {} // если клик левой кнопкой мыши
+
+//   let tglX = tgl.getBoundingClientRect().left + pageXOffset;
+//   let progressX = progress.offsetX;
+//   let progressWidth = progress.offsetWidth;
+//   // let posLeft = tgl.offsetLeft;
+//   console.log(progressX);
+
+//   window.onmousemove = function(evt) {
+//     tgl.style.transition = 'none';
+//     let newPos = evt.pageX;
+//     // console.log(newPos)
+//     // tgl.style.left = newPos + 'px';
+
+//     return false;
+//   }
+// })

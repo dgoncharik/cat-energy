@@ -98,6 +98,7 @@ gulp.task("css", function() {
 gulp.task("js", function() {
   return gulp.src(path.source.js + "/**/*.js")
     .pipe(gulp.dest(path.build.js))
+    .pipe(browserSync.stream())
 })
 
 gulp.task("fonts", function() {
