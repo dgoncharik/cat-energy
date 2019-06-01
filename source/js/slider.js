@@ -1,16 +1,20 @@
-let slider = document.querySelector('.comparisons');
-let imgBefore = slider.querySelector('.comparisons__before-picture-wrapper');
-let imgAfter = slider.querySelector('.comparisons__after-picture-wrapper');
-let range = slider.querySelector('.comparisons__range');
-let progress = range.querySelector('.comparisons__progress');
-let tgl = range.querySelector('.comparisons__toggle');
-let btnBefore = range.querySelector('.comparisons__btn--before');
-let btnAfter = range.querySelector('.comparisons__btn--after');
+var slider = document.querySelector('.comparisons');
+var imgBefore = slider.querySelector('.comparisons__before-picture-wrapper');
+var imgAfter = slider.querySelector('.comparisons__after-picture-wrapper');
+var range = slider.querySelector('.comparisons__range');
+var progress = range.querySelector('.comparisons__progress');
+var tgl = range.querySelector('.comparisons__toggle');
+var btnBefore = range.querySelector('.comparisons__btn--before');
+var btnAfter = range.querySelector('.comparisons__btn--after');
 
-let mobileWidth = 320;
-let tabletWidth = 768;
-let desktopWidth = 1300;
-let windowWidth = document.body.clientWidth;
+var mobileWidth = 320;
+var tabletWidth = 768;
+var desktopWidth = 1300;
+var windowWidth = document.body.clientWidth;
+
+function onlyNumbers(str) {
+  return Number(str.replace(/\D+/g,""))
+}
 
 btnBefore.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -20,14 +24,11 @@ btnBefore.addEventListener('click', function(evt) {
 
 btnAfter.addEventListener('click', function(evt) {
   evt.preventDefault();
-  let computedStyle = getComputedStyle(tgl);
-  let tglMarginLeft = computedStyle.marginLeft;
-  let tglMarginRight = computedStyle.marginRight;
-  let tglWidth = computedStyle.width;
+  var tglStyle = getComputedStyle(tgl);
   imgAfter.style.width = '100%';
 
   if (windowWidth < tabletWidth) {
-    tgl.style.left = `calc(100% - (${tglWidth} + ${tglMarginLeft} + ${tglMarginRight})`;
+    tgl.style.left = 'calc(100% - (' + tglStyle.width + ' + ' + tglStyle.marginLeft + ' + ' + tglStyle.marginRight + '))'
   } else {
     tgl.style.left = '100%';
   }
@@ -40,35 +41,64 @@ window.onresize = function(evt) {
     tgl.style = null;
 };
 
-tgl.addEventListener('mousedown', function(evt) {
-  let progressX = progress.getBoundingClientRect().left + pageXOffset;
-  let tglX = tgl.getBoundingClientRect().left + pageXOffset;
-  // console.log(tglX, progressX);
+function changeSlide (evt) {
+  evt.preventDefault();
+  var type = evt.type;
+  if (type == 'mousemove' && evt.which != 1) return false;
+  var progressWidth = progress.offsetWidth;
+  var progressX = progress.getBoundingClientRect().left + pageXOffset;
+  var cursorX = evt.clientX;
+  if (type === 'touchmove') {cursorX = evt.changedTouches[0].pageX}
+  var newPos = cursorX - progressX;
 
-  window.onmousemove = function(evt) {
-    tgl.style.transition = 'none';
-    let cursorX = evt.clientX;
-    let newPos = cursorX - progressX;
-    console.log(newPos)
-    tgl.style.left = newPos + 'px';
+  if (windowWidth < tabletWidth) {
+    var tglStyle = getComputedStyle(tgl);
+    var progressStyle = getComputedStyle(progress);
+    var left = {
+      cur: tglStyle.left,
+      min: '0px',
+      max: progress.offsetWidth - (onlyNumbers(tglStyle.width) + 
+                                  onlyNumbers(tglStyle.marginLeft) + 
+                                  onlyNumbers(tglStyle.marginRight) + 
+                                  onlyNumbers(progressStyle.borderLeftWidth) + 
+                                  onlyNumbers(progressStyle.borderRightWidth)) + 'px'
+    }
+
+    if (cursorX > prevCursorX + 10 && left.cur === left.min) {
+      tgl.style.left = left.max
+      imgAfter.style.width = '100%';
+    } else if (cursorX < prevCursorX - 10 && left.cur === left.max) {
+        tgl.style.left = left.min
+        imgAfter.style.width = '0%';
+      }
+    
+  } else {
+      tgl.style.transition = 'none';
+      imgAfter.style.transition = 'none';
+      imgBefore.style.transition = 'none';
+      if (newPos < 0) newPos = 0;
+      if (newPos > progressWidth) newPos = progressWidth;
+      tgl.style.left = newPos + 'px';
+      imgAfter.style.width = (newPos / progressWidth * 100) + '%';
   }
+
+  return false;
+}
+
+function stopChangeSlide(evt) {
+  document.removeEventListener('mousemove', changeSlide);
+  tgl.style.transition = null;
+  imgAfter.style.transition = null;
+  imgBefore.style.transition = null;
+}
+
+tgl.addEventListener('touchstart', function(evt) {
+  this.addEventListener('touchmove', changeSlide);
 })
 
-// tgl.addEventListener('mousedown', function(evt) {
-//   // if (evt.which === 1) {} // если клик левой кнопкой мыши
-
-//   let tglX = tgl.getBoundingClientRect().left + pageXOffset;
-//   let progressX = progress.offsetX;
-//   let progressWidth = progress.offsetWidth;
-//   // let posLeft = tgl.offsetLeft;
-//   console.log(progressX);
-
-//   window.onmousemove = function(evt) {
-//     tgl.style.transition = 'none';
-//     let newPos = evt.pageX;
-//     // console.log(newPos)
-//     // tgl.style.left = newPos + 'px';
-
-//     return false;
-//   }
-// })
+var prevCursorX = null;
+tgl.addEventListener('mousedown', function(evt) {
+  prevCursorX = evt.clientX;
+  document.addEventListener('mousemove', changeSlide);
+  document.addEventListener('mouseup', stopChangeSlide);
+})
