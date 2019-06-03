@@ -71,7 +71,15 @@ gulp.task("html", function() {
   .pipe(posthtml([
     include()
   ]))
-  // .pipe(htmlmin({collapseWhitespace: true})) //минификация html
+  .pipe(gulp.dest(path.build.html))
+});
+
+gulp.task("html-min", function() {
+  return gulp.src(path.source.html + "/*.html")
+  .pipe(posthtml([
+    include()
+  ]))
+  .pipe(htmlmin({collapseWhitespace: true})) //минификация html
   .pipe(gulp.dest(path.build.html))
 });
 
