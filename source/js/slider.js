@@ -34,12 +34,12 @@ btnAfter.addEventListener('click', function(evt) {
   }
 })
 
-window.onresize = function(evt) {
+window.addEventListener('resize', function(evt) {
   windowWidth = document.body.clientWidth;
-    imgAfter.style = null;
-    imgBefore.style = null;
-    tgl.style = null;
-};
+  imgAfter.style.width = '';
+  imgBefore.style.width = '';
+  tgl.style.left = '';
+})
 
 function move (evt) {
   evt.preventDefault();
@@ -90,9 +90,9 @@ function move (evt) {
 function stopMove(evt) {
   document.removeEventListener('mousemove', move);
   tgl.removeEventListener('touchmove', move);
-  tgl.style.transition = null;
-  imgAfter.style.transition = null;
-  imgBefore.style.transition = null;
+  tgl.style.transition = '';
+  imgAfter.style.transition = '';
+  imgBefore.style.transition = '';
 }
 
 var prevCursorX = null;
