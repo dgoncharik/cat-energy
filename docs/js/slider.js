@@ -63,10 +63,10 @@ function move (evt) {
                                   onlyNumbers(progressStyle.borderRightWidth)) + 'px'
     }
 
-    if (cursorX > prevCursorX + 10 && left.cur === left.min) {
+    if (cursorX > prevCursorX + 1 && left.cur === left.min) {
       tgl.style.left = left.max;
       imgAfter.style.width = '100%';
-    } else if (cursorX < prevCursorX - 10 && left.cur === left.max) {
+    } else if (cursorX < prevCursorX - 1 && left.cur === left.max) {
         tgl.style.left = left.min;
         imgAfter.style.width = '0%';
       }
