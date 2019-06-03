@@ -28,7 +28,7 @@ btnAfter.addEventListener('click', function(evt) {
   imgAfter.style.width = '100%';
 
   if (windowWidth < tabletWidth) {
-    tgl.style.left = 'calc(100% - (' + tglStyle.width + ' + ' + tglStyle.marginLeft + ' + ' + tglStyle.marginRight + '))'
+    tgl.style.left = 'calc(100% - (' + tglStyle.width + ' + ' + tglStyle.marginLeft + ' + ' + tglStyle.marginRight + '))';
   } else {
     tgl.style.left = '100%';
   }
@@ -41,17 +41,16 @@ window.onresize = function(evt) {
     tgl.style = null;
 };
 
-function changeSlide (evt) {
+function move (evt) {
   evt.preventDefault();
   var type = evt.type;
   if (type == 'mousemove' && evt.which != 1) return false;
   var progressWidth = progress.offsetWidth;
   var progressX = progress.getBoundingClientRect().left + pageXOffset;
-  var cursorX = evt.clientX;
+  var cursorX = evt.pageX;
   if (type === 'touchmove') {cursorX = evt.changedTouches[0].pageX}
   var newPos = cursorX - progressX;
-
-  if (windowWidth < tabletWidth) {
+  function moveMobile() {
     var tglStyle = getComputedStyle(tgl);
     var progressStyle = getComputedStyle(progress);
     var left = {
@@ -65,13 +64,16 @@ function changeSlide (evt) {
     }
 
     if (cursorX > prevCursorX + 10 && left.cur === left.min) {
-      tgl.style.left = left.max
+      tgl.style.left = left.max;
       imgAfter.style.width = '100%';
     } else if (cursorX < prevCursorX - 10 && left.cur === left.max) {
-        tgl.style.left = left.min
+        tgl.style.left = left.min;
         imgAfter.style.width = '0%';
       }
+  }
 
+  if (windowWidth < tabletWidth) {
+    moveMobile()
   } else {
       tgl.style.transition = 'none';
       imgAfter.style.transition = 'none';
@@ -85,9 +87,9 @@ function changeSlide (evt) {
   return false;
 }
 
-function stopChangeSlide(evt) {
-  document.removeEventListener('mousemove', changeSlide);
-  tgl.removeEventListener('touchmove', changeSlide);
+function stopMove(evt) {
+  document.removeEventListener('mousemove', move);
+  tgl.removeEventListener('touchmove', move);
   tgl.style.transition = null;
   imgAfter.style.transition = null;
   imgBefore.style.transition = null;
@@ -96,12 +98,12 @@ function stopChangeSlide(evt) {
 var prevCursorX = null;
 tgl.addEventListener('touchstart', function(evt) {
   prevCursorX = cursorX = evt.changedTouches[0].pageX;
-  this.addEventListener('touchmove', changeSlide);
-  this.addEventListener('touchend', stopChangeSlide);
+  this.addEventListener('touchmove', move);
+  this.addEventListener('touchend', stopMove);
 })
 
 tgl.addEventListener('mousedown', function(evt) {
   prevCursorX = evt.clientX;
-  document.addEventListener('mousemove', changeSlide);
-  document.addEventListener('mouseup', stopChangeSlide);
+  document.addEventListener('mousemove', move);
+  document.addEventListener('mouseup', stopMove);
 })
