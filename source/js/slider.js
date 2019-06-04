@@ -24,11 +24,11 @@ btnBefore.addEventListener('click', function(evt) {
 
 btnAfter.addEventListener('click', function(evt) {
   evt.preventDefault();
-  var tglStyle = getComputedStyle(tgl);
+  var tglComputedStyle = getComputedStyle(tgl);
   imgAfter.style.width = '100%';
 
   if (windowWidth < tabletWidth) {
-    tgl.style.left = 'calc(100% - (' + tglStyle.width + ' + ' + tglStyle.marginLeft + ' + ' + tglStyle.marginRight + '))';
+    tgl.style.left = 'calc(100% - (' + tglComputedStyle.width + ' + ' + tglComputedStyle.marginLeft + ' + ' + tglComputedStyle.marginRight + '))';
   } else {
     tgl.style.left = '100%';
   }
@@ -43,31 +43,29 @@ window.addEventListener('resize', function(evt) {
 
 function move (evt) {
   evt.preventDefault();
-  var type = evt.type;
-  if (type == 'mousemove' && evt.which != 1) return false;
+  if (evt.type == 'mousemove' && evt.which != 1) return false;
   var progressWidth = progress.offsetWidth;
   var progressX = progress.getBoundingClientRect().left + pageXOffset;
-  var cursorX = evt.pageX;
-  if (type === 'touchmove') {cursorX = evt.changedTouches[0].pageX}
+  var cursorX = evt.type === 'mousemove' ? evt.pageX : cursorX = evt.changedTouches[0].pageX;
   var newPos = cursorX - progressX;
   function moveMobile() {
-    var tglStyle = getComputedStyle(tgl);
-    var progressStyle = getComputedStyle(progress);
-    var left = {
-      cur: tglStyle.left,
-      min: '0px',
-      max: progress.offsetWidth - (onlyNumbers(tglStyle.width) +
-                                  onlyNumbers(tglStyle.marginLeft) +
-                                  onlyNumbers(tglStyle.marginRight) +
-                                  onlyNumbers(progressStyle.borderLeftWidth) +
-                                  onlyNumbers(progressStyle.borderRightWidth)) + 'px'
+    var tglComputedStyle = getComputedStyle(tgl);
+    var progressComputedStyle = getComputedStyle(progress);
+    var tglPosition = {
+      current: tglComputedStyle.left,
+      start: '0px',
+      end: progress.offsetWidth - (onlyNumbers(tglComputedStyle.width) +
+                                  onlyNumbers(tglComputedStyle.marginLeft) +
+                                  onlyNumbers(tglComputedStyle.marginRight) +
+                                  onlyNumbers(progressComputedStyle.borderLeftWidth) +
+                                  onlyNumbers(progressComputedStyle.borderRightWidth)) + 'px'
     }
 
-    if (cursorX > prevCursorX + 1 && left.cur === left.min) {
-      tgl.style.left = left.max;
+    if (cursorX > prevCursorX + 1 && tglPosition.current === tglPosition.start) {
+      tgl.style.left = tglPosition.end;
       imgAfter.style.width = '100%';
-    } else if (cursorX < prevCursorX - 1 && left.cur === left.max) {
-        tgl.style.left = left.min;
+    } else if (cursorX < prevCursorX - 1 && tglPosition.current === tglPosition.end) {
+        tgl.style.left = tglPosition.start;
         imgAfter.style.width = '0%';
       }
   }
