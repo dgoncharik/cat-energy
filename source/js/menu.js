@@ -1,8 +1,17 @@
-var mainNav = document.querySelector('.main-nav');
-var toogle = mainNav.querySelector('.main-nav__toogle-menu');
+'use strict';
 
-mainNav.classList.remove('main-nav--no-js');
+(function() {
+  var mainNavElement = document.querySelector('.main-nav');
+  var toogleElement = mainNavElement.querySelector('.main-nav__toogle-menu');
 
-toogle.addEventListener('click', function(evt) {
-  mainNav.classList.toggle('main-nav--opened')
-})
+  function initialization() {
+    mainNavElement.classList.remove('main-nav--no-js');
+  }
+  
+  toogleElement.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    mainNavElement.classList.toggle('main-nav--opened');
+  })
+
+  initialization();
+}())
