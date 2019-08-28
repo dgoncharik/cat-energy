@@ -7,9 +7,9 @@
     TABLET: 768,
     DESKTOP: 1300
   };
-  var _currentBreakpoint = null;
+  var _currentBreakpoint = getNewBreakpoint();
 
-  function getNewBreackpoint() {
+  function getNewBreakpoint() {
     var newBreakpoint;
     switch (true) {
       case (window.innerWidth < Breakpoint.TABLET):
@@ -25,17 +25,17 @@
     return newBreakpoint;
   }
 
-  function breakpointIsValid() {
-    return getNewBreackpoint() == _currentBreakpoint;
-  }
-
-  function changeCurentBreakpoint() {
-    _currentBreakpoint = getNewBreackpoint();
+  function breakpointChanged() {
+    var newBreakpoint = getNewBreakpoint();
+    if (newBreakpoint != _currentBreakpoint) {
+      _currentBreakpoint = newBreakpoint;
+      return true;
+    }
+    return false;
   }
 
   function onWindowResize() {
-      if (!breakpointIsValid()) {
-        changeCurentBreakpoint();
+      if (breakpointChanged()) {
         window.range.resetPosition();
       }
   }
