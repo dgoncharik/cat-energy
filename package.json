@@ -20,7 +20,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "posthtml-include": "^1.2.0"
   },
   "scripts": {
